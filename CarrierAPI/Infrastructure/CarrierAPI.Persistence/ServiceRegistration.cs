@@ -1,4 +1,6 @@
-﻿using CarrierAPI.Persistence.Contexts;
+﻿using CarrierAPI.Domain.Entities.Identity;
+using CarrierAPI.Persistence.Contexts;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -13,7 +15,8 @@ namespace CarrierAPI.Persistence
     {
         public static void AddPersistenceServices(this IServiceCollection services) { 
             services.AddDbContext<CarrierAPIContext>(options => options.UseNpgsql(Configuration.ConnectionString));
-        
+            services.AddIdentity<AppUser, IdentityRole<int>>()
+            .AddEntityFrameworkStores<CarrierAPIContext>();
         }
     }
 }

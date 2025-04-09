@@ -9,3 +9,4 @@ C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\n
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\net8.0\refint\CarrierAPI.Domain.dll
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\net8.0\CarrierAPI.Domain.pdb
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\net8.0\ref\CarrierAPI.Domain.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\net8.0\CarrierAPI.Domain.csproj.AssemblyReference.cache

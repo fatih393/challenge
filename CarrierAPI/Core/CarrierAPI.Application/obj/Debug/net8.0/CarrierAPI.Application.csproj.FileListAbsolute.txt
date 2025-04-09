@@ -9,3 +9,7 @@ C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Application\obj\De
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Application\obj\Debug\net8.0\refint\CarrierAPI.Application.dll
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Application\obj\Debug\net8.0\CarrierAPI.Application.pdb
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Application\obj\Debug\net8.0\ref\CarrierAPI.Application.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Application\bin\Debug\net8.0\CarrierAPI.Domain.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Application\bin\Debug\net8.0\CarrierAPI.Domain.pdb
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Application\obj\Debug\net8.0\CarrierAPI.Application.csproj.AssemblyReference.cache
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Application\obj\Debug\net8.0\CarrierA.2695DAB0.Up2Date

@@ -1,4 +1,7 @@
 ﻿using CarrierAPI.Domain.Entities;
+using CarrierAPI.Domain.Entities.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CarrierAPI.Persistence.Contexts
 {
-    public class CarrierAPIContext :DbContext
+    public class CarrierAPIContext : IdentityDbContext<AppUser, IdentityRole<int>, int>
     {
         public CarrierAPIContext(DbContextOptions options): base(options) { }
         public DbSet<Carrier> Carriers { get; set; }
