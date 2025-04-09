@@ -1,0 +1,6 @@
+@CarrierAPI.API_HostAddress = http://localhost:5147
+
+GET {{CarrierAPI.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
