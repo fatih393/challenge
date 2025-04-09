@@ -1,0 +1,11 @@
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\bin\Debug\net8.0\CarrierAPI.Domain.deps.json
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\bin\Debug\net8.0\CarrierAPI.Domain.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\bin\Debug\net8.0\CarrierAPI.Domain.pdb
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\net8.0\CarrierAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\net8.0\CarrierAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\net8.0\CarrierAPI.Domain.AssemblyInfo.cs
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\net8.0\CarrierAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\net8.0\CarrierAPI.Domain.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\net8.0\refint\CarrierAPI.Domain.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\net8.0\CarrierAPI.Domain.pdb
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Core\CarrierAPI.Domain\obj\Debug\net8.0\ref\CarrierAPI.Domain.dll

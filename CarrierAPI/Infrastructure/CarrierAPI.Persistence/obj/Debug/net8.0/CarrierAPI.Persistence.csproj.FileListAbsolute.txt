@@ -1,0 +1,17 @@
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\CarrierAPI.Persistence.csproj.AssemblyReference.cache
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\CarrierAPI.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\CarrierAPI.Persistence.AssemblyInfoInputs.cache
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\CarrierAPI.Persistence.AssemblyInfo.cs
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\CarrierAPI.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\bin\Debug\net8.0\CarrierAPI.Persistence.deps.json
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\bin\Debug\net8.0\CarrierAPI.Persistence.runtimeconfig.json
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\bin\Debug\net8.0\CarrierAPI.Persistence.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\bin\Debug\net8.0\CarrierAPI.Persistence.pdb
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\bin\Debug\net8.0\CarrierAPI.Domain.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\bin\Debug\net8.0\CarrierAPI.Domain.pdb
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\CarrierA.6B7C279A.Up2Date
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\CarrierAPI.Persistence.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\refint\CarrierAPI.Persistence.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\CarrierAPI.Persistence.pdb
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\CarrierAPI.Persistence.genruntimeconfig.cache
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\ref\CarrierAPI.Persistence.dll
