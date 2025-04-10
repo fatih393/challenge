@@ -40,9 +40,9 @@ namespace CarrierAPI.Persistence.Repostories
             return entityEntry.State!= EntityState.Deleted;
         }
 
-        public async Task<bool> RemoveAsync(string id)
+        public async Task<bool> RemoveAsync(int id)
         {
-            T model = await Table.FirstOrDefaultAsync(data => data.Id == int.Parse(id));
+            T model = await Table.FirstOrDefaultAsync(data => data.Id == id);
             return Remove(model);
         }
 

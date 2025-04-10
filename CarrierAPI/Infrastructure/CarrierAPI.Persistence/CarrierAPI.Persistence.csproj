@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\CarrierAPI.Application\CarrierAPI.Application.csproj" />
     <ProjectReference Include="..\..\Core\CarrierAPI.Domain\CarrierAPI.Domain.csproj" />
   </ItemGroup>
 

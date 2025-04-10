@@ -179,6 +179,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj"
+              },
               "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj": {
                 "projectPath": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj"
               }

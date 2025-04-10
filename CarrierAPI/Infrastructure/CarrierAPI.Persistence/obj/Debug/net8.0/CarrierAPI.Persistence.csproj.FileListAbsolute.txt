@@ -15,3 +15,5 @@ C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persiste
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\CarrierAPI.Persistence.pdb
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\CarrierAPI.Persistence.genruntimeconfig.cache
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\obj\Debug\net8.0\ref\CarrierAPI.Persistence.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\bin\Debug\net8.0\CarrierAPI.Application.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Persistence\bin\Debug\net8.0\CarrierAPI.Application.pdb

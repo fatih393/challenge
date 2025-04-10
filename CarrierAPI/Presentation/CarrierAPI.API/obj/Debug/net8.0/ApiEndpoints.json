@@ -1,5 +1,69 @@
 [
   {
+    "ContainingType": "CarrierAPI.API.Controllers.CarriersController",
+    "Method": "AddCarrier",
+    "RelativePath": "api/Carriers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createCarrierCommandRequest",
+        "Type": "CarrierAPI.Application.Features.Commands.Carrier.CreateCarrier.CreateCarrierCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarrierAPI.API.Controllers.CarriersController",
+    "Method": "GetCarriers",
+    "RelativePath": "api/Carriers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getCarrierQueryRequest",
+        "Type": "CarrierAPI.Application.Features.Queries.Carrier.GetCarrier.GetCarrierQueryRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarrierAPI.API.Controllers.CarriersController",
+    "Method": "UpdateCarriers",
+    "RelativePath": "api/Carriers",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateCarrierCommandRequest",
+        "Type": "CarrierAPI.Application.Features.Commands.Carrier.UpdateCarrier.UpdateCarrierCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarrierAPI.API.Controllers.CarriersController",
+    "Method": "RemoveCarriers",
+    "RelativePath": "api/Carriers/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CarrierAPI.API.Controllers.UsersController",
     "Method": "CreateUser",
     "RelativePath": "api/Users",

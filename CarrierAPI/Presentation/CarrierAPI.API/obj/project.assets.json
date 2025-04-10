@@ -1798,6 +1798,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "CarrierAPI.Application": "1.0.0",
           "CarrierAPI.Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.30",
           "Microsoft.EntityFrameworkCore": "9.0.4",
