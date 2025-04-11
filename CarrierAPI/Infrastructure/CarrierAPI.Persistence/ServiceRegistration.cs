@@ -23,8 +23,12 @@ namespace CarrierAPI.Persistence
             .AddEntityFrameworkStores<CarrierAPIContext>();
 
             services.AddScoped<ICarrierService, CarrierService>();
+            services.AddScoped<ICarrierConfigurationService, CarrierConfigurationService>();
             services.AddScoped<ICarrierReadRepository, CarrierReadRepository>();
             services.AddScoped<ICarrierWriteRepository, CarrierWriteRepository>();
+            services.AddScoped<ICarrierConfigurationWriteRepository, CarrierConfigurationWriteRepository>();
+            services.AddScoped<ICarrierConfigurationReadRepository, CarrierConfigurationReadRepository>();
+
         }
         
     }

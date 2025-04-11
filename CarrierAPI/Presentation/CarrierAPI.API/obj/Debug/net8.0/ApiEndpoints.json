@@ -1,5 +1,69 @@
 [
   {
+    "ContainingType": "CarrierAPI.API.Controllers.CarrierConfigurationsController",
+    "Method": "AddCarrierConfiguration",
+    "RelativePath": "api/CarrierConfigurations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createCarrierConfigurationCommandRequest",
+        "Type": "CarrierAPI.Application.Features.Commands.CarrierConfiguration.CreateCarrierConfiguration.CreateCarrierConfigurationCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarrierAPI.API.Controllers.CarrierConfigurationsController",
+    "Method": "GetCarrierConfiguration",
+    "RelativePath": "api/CarrierConfigurations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getCarrierConfigurationQueryRequest",
+        "Type": "CarrierAPI.Application.Features.Queries.CarrierConfiguration.GetCarrierConfiguration.GetCarrierConfigurationQueryRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarrierAPI.API.Controllers.CarrierConfigurationsController",
+    "Method": "UpdateCarrierConfiguration",
+    "RelativePath": "api/CarrierConfigurations",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateCarrierConfigurationCommandRequest",
+        "Type": "CarrierAPI.Application.Features.Commands.CarrierConfiguration.UpdateCarrierConfiguration.UpdateCarrierConfigurationCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarrierAPI.API.Controllers.CarrierConfigurationsController",
+    "Method": "RemoveCarrierConfiguration",
+    "RelativePath": "api/CarrierConfigurations/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CarrierAPI.API.Controllers.CarriersController",
     "Method": "AddCarrier",
     "RelativePath": "api/Carriers",
