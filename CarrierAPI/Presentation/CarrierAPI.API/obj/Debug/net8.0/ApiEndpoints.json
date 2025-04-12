@@ -128,6 +128,54 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CarrierAPI.API.Controllers.OrdersController",
+    "Method": "AddOrder",
+    "RelativePath": "api/Orders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createOrderCommandRequest",
+        "Type": "CarrierAPI.Application.Features.Commands.Order.CreateOrder.CreateOrderCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarrierAPI.API.Controllers.OrdersController",
+    "Method": "ListOrder",
+    "RelativePath": "api/Orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "getOrderQueryRequest",
+        "Type": "CarrierAPI.Application.Features.Queries.Order.GetOrder.GetOrderQueryRequest",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarrierAPI.API.Controllers.OrdersController",
+    "Method": "RemoveOrder",
+    "RelativePath": "api/Orders/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CarrierAPI.API.Controllers.UsersController",
     "Method": "CreateUser",
     "RelativePath": "api/Users",

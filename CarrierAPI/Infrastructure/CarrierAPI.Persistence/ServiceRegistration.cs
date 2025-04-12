@@ -24,10 +24,13 @@ namespace CarrierAPI.Persistence
 
             services.AddScoped<ICarrierService, CarrierService>();
             services.AddScoped<ICarrierConfigurationService, CarrierConfigurationService>();
+            services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<ICarrierReadRepository, CarrierReadRepository>();
             services.AddScoped<ICarrierWriteRepository, CarrierWriteRepository>();
             services.AddScoped<ICarrierConfigurationWriteRepository, CarrierConfigurationWriteRepository>();
             services.AddScoped<ICarrierConfigurationReadRepository, CarrierConfigurationReadRepository>();
+            services.AddScoped<IOrderReadRepository, OrderReadRepository>();
+            services.AddScoped<IOrderWriteRepository, OrderWriteRepository>();
 
         }
         

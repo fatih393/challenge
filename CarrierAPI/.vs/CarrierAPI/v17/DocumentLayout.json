@@ -1,12 +1,258 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E127BD2F-427D-4270-8784-AA8569C31CEF}|Presentation\\CarrierAPI.API\\CarrierAPI.API.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\presentation\\carrierapi.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E127BD2F-427D-4270-8784-AA8569C31CEF}|Presentation\\CarrierAPI.API\\CarrierAPI.API.csproj|solutionrelative:presentation\\carrierapi.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.application\\features\\commands\\order\\removeorder\\removeordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|solutionrelative:core\\carrierapi.application\\features\\commands\\order\\removeorder\\removeordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.application\\features\\commands\\order\\removeorder\\removeordercommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|solutionrelative:core\\carrierapi.application\\features\\commands\\order\\removeorder\\removeordercommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.application\\features\\queries\\order\\getorder\\getorderqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|solutionrelative:core\\carrierapi.application\\features\\queries\\order\\getorder\\getorderqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.application\\features\\commands\\order\\removeorder\\removeordercommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|solutionrelative:core\\carrierapi.application\\features\\commands\\order\\removeorder\\removeordercommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.persistence\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|solutionrelative:infrastructure\\carrierapi.persistence\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.application\\abstractions\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|solutionrelative:core\\carrierapi.application\\abstractions\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.application\\features\\queries\\order\\getorder\\getorderqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|solutionrelative:core\\carrierapi.application\\features\\queries\\order\\getorder\\getorderqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.application\\features\\queries\\order\\getorder\\getorderqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|solutionrelative:core\\carrierapi.application\\features\\queries\\order\\getorder\\getorderqueryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.application\\features\\commands\\order\\createorder\\createordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|solutionrelative:core\\carrierapi.application\\features\\commands\\order\\createorder\\createordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.application\\features\\commands\\order\\createorder\\createordercommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|solutionrelative:core\\carrierapi.application\\features\\commands\\order\\createorder\\createordercommandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|solutionrelative:core\\carrierapi.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.persistence\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|solutionrelative:infrastructure\\carrierapi.persistence\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.application\\features\\commands\\order\\createorder\\createordercommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|solutionrelative:core\\carrierapi.application\\features\\commands\\order\\createorder\\createordercommandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RemoveOrderCommandResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Commands\\Order\\RemoveOrder\\RemoveOrderCommandResponse.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Application\\Features\\Commands\\Order\\RemoveOrder\\RemoveOrderCommandResponse.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Commands\\Order\\RemoveOrder\\RemoveOrderCommandResponse.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Application\\Features\\Commands\\Order\\RemoveOrder\\RemoveOrderCommandResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T10:01:28.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RemoveOrderCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Commands\\Order\\RemoveOrder\\RemoveOrderCommandRequest.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Application\\Features\\Commands\\Order\\RemoveOrder\\RemoveOrderCommandRequest.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Commands\\Order\\RemoveOrder\\RemoveOrderCommandRequest.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Application\\Features\\Commands\\Order\\RemoveOrder\\RemoveOrderCommandRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T09:57:57.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RemoveOrderCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Commands\\Order\\RemoveOrder\\RemoveOrderCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Application\\Features\\Commands\\Order\\RemoveOrder\\RemoveOrderCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Commands\\Order\\RemoveOrder\\RemoveOrderCommandHandler.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Application\\Features\\Commands\\Order\\RemoveOrder\\RemoveOrderCommandHandler.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T09:57:01.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetOrderQueryResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Queries\\Order\\GetOrder\\GetOrderQueryResponse.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Application\\Features\\Queries\\Order\\GetOrder\\GetOrderQueryResponse.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Queries\\Order\\GetOrder\\GetOrderQueryResponse.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Application\\Features\\Queries\\Order\\GetOrder\\GetOrderQueryResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T09:43:10.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetOrderQueryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Queries\\Order\\GetOrder\\GetOrderQueryRequest.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Application\\Features\\Queries\\Order\\GetOrder\\GetOrderQueryRequest.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Queries\\Order\\GetOrder\\GetOrderQueryRequest.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Application\\Features\\Queries\\Order\\GetOrder\\GetOrderQueryRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T09:42:56.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetOrderQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Queries\\Order\\GetOrder\\GetOrderQueryHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Application\\Features\\Queries\\Order\\GetOrder\\GetOrderQueryHandler.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Queries\\Order\\GetOrder\\GetOrderQueryHandler.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Application\\Features\\Queries\\Order\\GetOrder\\GetOrderQueryHandler.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T09:42:16.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateOrderCommandResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Commands\\Order\\CreateOrder\\CreateOrderCommandResponse.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Application\\Features\\Commands\\Order\\CreateOrder\\CreateOrderCommandResponse.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Commands\\Order\\CreateOrder\\CreateOrderCommandResponse.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Application\\Features\\Commands\\Order\\CreateOrder\\CreateOrderCommandResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T08:19:26.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Domain\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Order.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Domain\\Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T08:15:52.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Persistence\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\CarrierAPI.Persistence\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Persistence\\ServiceRegistration.cs",
+              "RelativeToolTip": "Infrastructure\\CarrierAPI.Persistence\\ServiceRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T08:04:50.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Persistence\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\CarrierAPI.Persistence\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Persistence\\Services\\OrderService.cs",
+              "RelativeToolTip": "Infrastructure\\CarrierAPI.Persistence\\Services\\OrderService.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwEsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T08:04:12.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Presentation\\CarrierAPI.API\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Presentation\\CarrierAPI.API\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Presentation\\CarrierAPI.API\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Presentation\\CarrierAPI.API\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwCAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T07:57:38.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Abstractions\\Services\\IOrderService.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Application\\Abstractions\\Services\\IOrderService.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Abstractions\\Services\\IOrderService.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Application\\Abstractions\\Services\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T07:57:19.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CreateOrderCommandRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Commands\\Order\\CreateOrder\\CreateOrderCommandRequest.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Application\\Features\\Commands\\Order\\CreateOrder\\CreateOrderCommandRequest.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Commands\\Order\\CreateOrder\\CreateOrderCommandRequest.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Application\\Features\\Commands\\Order\\CreateOrder\\CreateOrderCommandRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T07:56:23.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateOrderCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Commands\\Order\\CreateOrder\\CreateOrderCommandHandler.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Application\\Features\\Commands\\Order\\CreateOrder\\CreateOrderCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Features\\Commands\\Order\\CreateOrder\\CreateOrderCommandHandler.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Application\\Features\\Commands\\Order\\CreateOrder\\CreateOrderCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T07:55:57.715Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
