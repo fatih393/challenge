@@ -1,13 +1,8 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
 using CarrierAPI.Application.Repostories;
 using CarrierAPI.Domain.Entities;
-using CarrierAPI.Persistence.Repostories;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CarrierAPI.Persistence.Services
 {

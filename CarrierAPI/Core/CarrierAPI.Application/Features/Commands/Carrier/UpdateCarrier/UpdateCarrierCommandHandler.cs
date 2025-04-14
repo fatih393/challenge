@@ -1,24 +1,23 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+
 
 namespace CarrierAPI.Application.Features.Commands.Carrier.UpdateCarrier
 {
     public class UpdateCarrierCommandHandler : IRequestHandler<UpdateCarrierCommandRequest, UpdateCarrierCommandResponse>
     {
         readonly ICarrierService _carrierService;
-
-        public UpdateCarrierCommandHandler(ICarrierService carrierService)
+        readonly ILogger<UpdateCarrierCommandHandler> _logger;
+        public UpdateCarrierCommandHandler(ICarrierService carrierService, ILogger<UpdateCarrierCommandHandler> logger)
         {
             _carrierService = carrierService;
+            _logger = logger;
         }
 
         public async Task<UpdateCarrierCommandResponse> Handle(UpdateCarrierCommandRequest request, CancellationToken cancellationToken)
         {
+            _logger.LogInformation("Kargo şirketi güncelleme");
             bool control = await _carrierService.UpdateCarrierAsync(
                 request.Id,
                 request.Name,

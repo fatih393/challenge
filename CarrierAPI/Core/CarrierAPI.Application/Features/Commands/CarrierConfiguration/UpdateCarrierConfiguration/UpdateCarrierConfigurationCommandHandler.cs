@@ -1,24 +1,23 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+
 
 namespace CarrierAPI.Application.Features.Commands.CarrierConfiguration.UpdateCarrierConfiguration
 {
     public class UpdateCarrierConfigurationCommandHandler : IRequestHandler<UpdateCarrierConfigurationCommandRequest, UpdateCarrierConfigurationCommandResponse>
     {
         readonly ICarrierConfigurationService _carrierConfigurationService;
-
-        public UpdateCarrierConfigurationCommandHandler(ICarrierConfigurationService carrierConfigurationService)
+        readonly ILogger<UpdateCarrierConfigurationCommandHandler> _logger;
+        public UpdateCarrierConfigurationCommandHandler(ICarrierConfigurationService carrierConfigurationService, ILogger<UpdateCarrierConfigurationCommandHandler> logger)
         {
             _carrierConfigurationService = carrierConfigurationService;
+            _logger = logger;
         }
 
         public async Task<UpdateCarrierConfigurationCommandResponse> Handle(UpdateCarrierConfigurationCommandRequest request, CancellationToken cancellationToken)
         {
+            _logger.LogInformation("Konfigürasyon güncelleme");
             bool control = await _carrierConfigurationService.UpdateCarrierConfigurationAsync(
                 request.Id, 
                 request.CarrierId, 

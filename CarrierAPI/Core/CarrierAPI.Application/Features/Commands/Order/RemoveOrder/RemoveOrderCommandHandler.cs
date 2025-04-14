@@ -1,24 +1,23 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+
 
 namespace CarrierAPI.Application.Features.Commands.Order.RemoveOrder
 {
     public class RemoveOrderCommandHandler : IRequestHandler<RemoveOrderCommandRequest, RemoveOrderCommandResponse>
     {
         readonly IOrderService _orderService;
-
-        public RemoveOrderCommandHandler(IOrderService orderService)
+        readonly ILogger<RemoveOrderCommandHandler> _logger;
+        public RemoveOrderCommandHandler(IOrderService orderService, ILogger<RemoveOrderCommandHandler> logger)
         {
             _orderService = orderService;
+            _logger = logger;
         }
 
         public async Task<RemoveOrderCommandResponse> Handle(RemoveOrderCommandRequest request, CancellationToken cancellationToken)
         {
+            _logger.LogInformation("Sipariş silme");
             if (await _orderService.RemoveOrder(request.Id))
                 return new()
                 {

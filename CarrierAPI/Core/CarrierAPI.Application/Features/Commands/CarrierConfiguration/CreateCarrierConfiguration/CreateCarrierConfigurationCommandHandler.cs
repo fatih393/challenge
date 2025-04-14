@@ -1,24 +1,23 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+
 
 namespace CarrierAPI.Application.Features.Commands.CarrierConfiguration.CreateCarrierConfiguration
 {
     public class CreateCarrierConfigurationCommandHandler : IRequestHandler<CreateCarrierConfigurationCommandRequest, CreateCarrierConfigurationCommandResponse>
     {
         readonly ICarrierConfigurationService _carrierConfigurationService;
-
-        public CreateCarrierConfigurationCommandHandler(ICarrierConfigurationService carrierConfigurationService)
+        readonly ILogger<CreateCarrierConfigurationCommandHandler> _logger;
+        public CreateCarrierConfigurationCommandHandler(ICarrierConfigurationService carrierConfigurationService, ILogger<CreateCarrierConfigurationCommandHandler> logger)
         {
             _carrierConfigurationService = carrierConfigurationService;
+            _logger = logger;
         }
 
         public async Task<CreateCarrierConfigurationCommandResponse> Handle(CreateCarrierConfigurationCommandRequest request, CancellationToken cancellationToken)
         {
+            _logger.LogInformation("Konfigürasyon ekleme");
             if (await _carrierConfigurationService.AddCarrierConfiguration(request.CarrierId, request.CarrierMaxDesi, request.CarrierMinDesi, request.CarrierCost))
                 return new()
                 {

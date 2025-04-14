@@ -1,25 +1,24 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+
 
 namespace CarrierAPI.Application.Features.Commands.Order.CreateOrder
 {
     public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommandRequest, CreateOrderCommandResponse>
     {
         readonly IOrderService _orderService;
-
-        public CreateOrderCommandHandler(IOrderService orderService)
+        readonly ILogger<CreateOrderCommandHandler> _logger;
+        public CreateOrderCommandHandler(IOrderService orderService, ILogger<CreateOrderCommandHandler> logger)
         {
             _orderService = orderService;
+            _logger = logger;
         }
 
         public async Task<CreateOrderCommandResponse> Handle(CreateOrderCommandRequest request, CancellationToken cancellationToken)
         {
-           bool control = await _orderService.AddOrder(request.OrderDesi);
+            _logger.LogInformation("Sipariş ekleme");
+            bool control = await _orderService.AddOrder(request.OrderDesi);
             if (control)
                 return new()
                 {

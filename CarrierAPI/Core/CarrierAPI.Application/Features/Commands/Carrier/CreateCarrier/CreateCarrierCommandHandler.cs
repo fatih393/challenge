@@ -1,24 +1,23 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+
 
 namespace CarrierAPI.Application.Features.Commands.Carrier.CreateCarrier
 {
     public class CreateCarrierCommandHandler : IRequestHandler<CreateCarrierCommandRequest, CreateCarrierCommandResponse>
     {
         readonly ICarrierService _carrierService;
-
-        public CreateCarrierCommandHandler(ICarrierService carrierService)
+        readonly ILogger<CreateCarrierCommandHandler> _logger;
+        public CreateCarrierCommandHandler(ICarrierService carrierService, ILogger<CreateCarrierCommandHandler> logger)
         {
             _carrierService = carrierService;
+            _logger = logger;
         }
 
         public async Task<CreateCarrierCommandResponse> Handle(CreateCarrierCommandRequest request, CancellationToken cancellationToken)
         {
+            _logger.LogInformation("Kargo şirketi ekleme");
            bool control= await _carrierService.AddCarrierAsync(request.CarrierName, request.CarrierIsActive, request.CarrierPlusDesiCost);
            if (control) 
             return new()
