@@ -3,32 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{744424A0-C24D-4DDC-A854-19BD77B5B765}|Infrastructure\\CarrierAPI.Infrastructure\\CarrierAPI.Infrastructure.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.infrastructure\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{744424A0-C24D-4DDC-A854-19BD77B5B765}|Infrastructure\\CarrierAPI.Infrastructure\\CarrierAPI.Infrastructure.csproj|solutionrelative:infrastructure\\carrierapi.infrastructure\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.persistence\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|solutionrelative:infrastructure\\carrierapi.persistence\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.persistence\\services\\carrierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|solutionrelative:infrastructure\\carrierapi.persistence\\services\\carrierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.domain\\entities\\events\\order\\postordersevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|solutionrelative:core\\carrierapi.domain\\entities\\events\\order\\postordersevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.domain\\entities\\events\\order\\removeordersevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|solutionrelative:core\\carrierapi.domain\\entities\\events\\order\\removeordersevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.domain\\entities\\events\\carrier\\removecarrierevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|solutionrelative:core\\carrierapi.domain\\entities\\events\\carrier\\removecarrierevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.domain\\entities\\events\\carrier\\putcarrierevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|solutionrelative:core\\carrierapi.domain\\entities\\events\\carrier\\putcarrierevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.domain\\entities\\events\\carrier\\postcarrierevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|solutionrelative:core\\carrierapi.domain\\entities\\events\\carrier\\postcarrierevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.persistence\\services\\carrierconfigurationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|solutionrelative:infrastructure\\carrierapi.persistence\\services\\carrierconfigurationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.domain\\entities\\events\\carrierconfigurationevent\\putcarrierconfigurationevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|solutionrelative:core\\carrierapi.domain\\entities\\events\\carrierconfigurationevent\\putcarrierconfigurationevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.domain\\entities\\events\\carrierconfigurationevent\\postcarrierconfigurationevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|solutionrelative:core\\carrierapi.domain\\entities\\events\\carrierconfigurationevent\\postcarrierconfigurationevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.domain\\entities\\events\\carrierconfigurationevent\\getcarrierconfigurationsevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|solutionrelative:core\\carrierapi.domain\\entities\\events\\carrierconfigurationevent\\getcarrierconfigurationsevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.persistence\\services\\carrierconfigurationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|solutionrelative:infrastructure\\carrierapi.persistence\\services\\carrierconfigurationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.domain\\entities\\events\\carrierconfigurationevent\\removecarrierconfigurationevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|solutionrelative:core\\carrierapi.domain\\entities\\events\\carrierconfigurationevent\\removecarrierconfigurationevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.domain\\entities\\events\\carrier\\putcarrierevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|solutionrelative:core\\carrierapi.domain\\entities\\events\\carrier\\putcarrierevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{744424A0-C24D-4DDC-A854-19BD77B5B765}|Infrastructure\\CarrierAPI.Infrastructure\\CarrierAPI.Infrastructure.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.infrastructure\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{744424A0-C24D-4DDC-A854-19BD77B5B765}|Infrastructure\\CarrierAPI.Infrastructure\\CarrierAPI.Infrastructure.csproj|solutionrelative:infrastructure\\carrierapi.infrastructure\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.persistence\\services\\carrierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|solutionrelative:infrastructure\\carrierapi.persistence\\services\\carrierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5F16B90-2AB1-426A-AF1B-E9E10B059C40}|Core\\CarrierAPI.Domain\\CarrierAPI.Domain.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.domain\\entities\\events\\carrier\\getcarrierevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{744424A0-C24D-4DDC-A854-19BD77B5B765}|Infrastructure\\CarrierAPI.Infrastructure\\CarrierAPI.Infrastructure.csproj|solutionrelative:infrastructure\\carrierapi.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.persistence\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC18E7CA-048A-4B50-B7DB-6AC9AFA6C34A}|Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj|solutionrelative:infrastructure\\carrierapi.persistence\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.application\\abstractions\\services\\ieventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|solutionrelative:core\\carrierapi.application\\abstractions\\services\\ieventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -66,11 +86,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "RemoveOrdersEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\Order\\RemoveOrdersEvent.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Domain\\Entities\\Events\\Order\\RemoveOrdersEvent.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\Order\\RemoveOrdersEvent.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Domain\\Entities\\Events\\Order\\RemoveOrdersEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T14:27:53.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PostOrdersEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\Order\\PostOrdersEvent.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Domain\\Entities\\Events\\Order\\PostOrdersEvent.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\Order\\PostOrdersEvent.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Domain\\Entities\\Events\\Order\\PostOrdersEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T14:23:57.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PutCarrierConfigurationEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\PutCarrierConfigurationEvent.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\PutCarrierConfigurationEvent.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\PutCarrierConfigurationEvent.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\PutCarrierConfigurationEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T13:52:08.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PostCarrierConfigurationEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\PostCarrierConfigurationEvent.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\PostCarrierConfigurationEvent.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\PostCarrierConfigurationEvent.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\PostCarrierConfigurationEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T13:49:11.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RemoveCarrierConfigurationEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\RemoveCarrierConfigurationEvent.cs",
+              "RelativeDocumentMoniker": "Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\RemoveCarrierConfigurationEvent.cs",
+              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\RemoveCarrierConfigurationEvent.cs",
+              "RelativeToolTip": "Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\RemoveCarrierConfigurationEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T13:46:56.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "RemoveCarrierEvent.cs",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\Carrier\\RemoveCarrierEvent.cs",
               "RelativeDocumentMoniker": "Core\\CarrierAPI.Domain\\Entities\\Events\\Carrier\\RemoveCarrierEvent.cs",
@@ -83,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "PutCarrierEvent.cs",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\Carrier\\PutCarrierEvent.cs",
               "RelativeDocumentMoniker": "Core\\CarrierAPI.Domain\\Entities\\Events\\Carrier\\PutCarrierEvent.cs",
@@ -109,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "GetCarrierConfigurationsEvent.cs",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\GetCarrierConfigurationsEvent.cs",
               "RelativeDocumentMoniker": "Core\\CarrierAPI.Domain\\Entities\\Events\\CarrierConfigurationEvent\\GetCarrierConfigurationsEvent.cs",
@@ -122,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "GetCarrierEvent.cs",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\Carrier\\GetCarrierEvent.cs",
               "RelativeDocumentMoniker": "Core\\CarrierAPI.Domain\\Entities\\Events\\Carrier\\GetCarrierEvent.cs",
@@ -130,12 +215,11 @@
               "RelativeToolTip": "Core\\CarrierAPI.Domain\\Entities\\Events\\Carrier\\GetCarrierEvent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T12:20:28.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T12:20:28.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "GetOrdersEvent.cs",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Domain\\Entities\\Events\\Order\\GetOrdersEvent.cs",
               "RelativeDocumentMoniker": "Core\\CarrierAPI.Domain\\Entities\\Events\\Order\\GetOrdersEvent.cs",
@@ -143,25 +227,24 @@
               "RelativeToolTip": "Core\\CarrierAPI.Domain\\Entities\\Events\\Order\\GetOrdersEvent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T12:17:01.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T12:17:01.25Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "CarrierConfigurationService.cs",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Persistence\\Services\\CarrierConfigurationService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\CarrierAPI.Persistence\\Services\\CarrierConfigurationService.cs",
               "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Persistence\\Services\\CarrierConfigurationService.cs",
               "RelativeToolTip": "Infrastructure\\CarrierAPI.Persistence\\Services\\CarrierConfigurationService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAiwDEAAABYAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAFYAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T09:26:41.984Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "CarrierService.cs",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Persistence\\Services\\CarrierService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\CarrierAPI.Persistence\\Services\\CarrierService.cs",
@@ -169,24 +252,24 @@
               "RelativeToolTip": "Infrastructure\\CarrierAPI.Persistence\\Services\\CarrierService.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAqwEIAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T09:25:11.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-15T09:25:11.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Persistence\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\CarrierAPI.Persistence\\Services\\OrderService.cs",
               "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Persistence\\Services\\OrderService.cs",
               "RelativeToolTip": "Infrastructure\\CarrierAPI.Persistence\\Services\\OrderService.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAAD4AAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwDkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T08:41:12.104Z"
+              "WhenOpened": "2025-04-15T08:41:12.104Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Presentation\\CarrierAPI.API\\Program.cs",
               "RelativeDocumentMoniker": "Presentation\\CarrierAPI.API\\Program.cs",
@@ -198,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "ServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Infrastructure\\ServiceRegistration.cs",
               "RelativeDocumentMoniker": "Infrastructure\\CarrierAPI.Infrastructure\\ServiceRegistration.cs",
@@ -210,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Presentation\\CarrierAPI.API\\appsettings.json",
               "RelativeDocumentMoniker": "Presentation\\CarrierAPI.API\\appsettings.json",
@@ -222,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "RabbitMqPublisher.cs",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Infrastructure\\RabbitMqPublisher.cs",
               "RelativeDocumentMoniker": "Infrastructure\\CarrierAPI.Infrastructure\\RabbitMqPublisher.cs",
@@ -235,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "IEventPublisher.cs",
               "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Abstractions\\Services\\IEventPublisher.cs",
               "RelativeDocumentMoniker": "Core\\CarrierAPI.Application\\Abstractions\\Services\\IEventPublisher.cs",

@@ -55,6 +55,7 @@ namespace CarrierAPI.Persistence.Services
             };
             await _orderWriteRepository.AddAsync(order);
             await _orderWriteRepository.Saveasync();
+            await _eventPublisher.PublishAsync(new PostOrdersEvent(order.Id, order.OrderDesi));
             return true;
         }
 
@@ -78,6 +79,7 @@ namespace CarrierAPI.Persistence.Services
             {
                 await _orderWriteRepository.RemoveAsync(id);
                 await _orderWriteRepository.Saveasync();
+                await _eventPublisher.PublishAsync(new RemoveOrdersEvent(id));
                 return true;    
             }
             catch

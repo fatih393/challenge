@@ -23,7 +23,7 @@ namespace CarrierAPI.Persistence.Services
         {
             try
             {
-                await _carrierConfigurationWriteRepository.AddAsync(new()
+             CarrierConfiguration new_carrierConfiguration  = (new()
                 {
                     CarrierId = CarrierId,
                     CarrierMaxDesi = CarrierMaxDesi,
@@ -31,7 +31,9 @@ namespace CarrierAPI.Persistence.Services
                     CarrierCost = CarrierCost
 
                 });
+                await _carrierConfigurationWriteRepository.AddAsync(new_carrierConfiguration);
                 await _carrierConfigurationWriteRepository.Saveasync();
+                await _eventPublisher.PublishAsync(new PostCarrierConfigurationEvent(new_carrierConfiguration.Id));
                 return true;
             }
             catch
@@ -63,6 +65,7 @@ namespace CarrierAPI.Persistence.Services
             {
                 await _carrierConfigurationWriteRepository.RemoveAsync(id);
                 await _carrierConfigurationWriteRepository.Saveasync();
+                await _eventPublisher.PublishAsync(new RemoveCarrierConfigurationEvent(id));
                 return true;
             }
             catch
@@ -81,6 +84,7 @@ namespace CarrierAPI.Persistence.Services
             carrierConfiguration.CarrierMinDesi = CarrierMinDesi;
             carrierConfiguration.CarrierCost = CarrierCost;
             await _carrierConfigurationWriteRepository.Saveasync();
+                await _eventPublisher.PublishAsync(new PutCarrierConfigurationEvent(id));
                 return true;
             }
             catch
