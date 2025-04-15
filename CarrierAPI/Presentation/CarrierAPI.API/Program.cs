@@ -1,5 +1,6 @@
 using CarrierAPI.Persistence;
 using CarrierAPI.Application;
+using CarrierAPI.Infrastructure;
 using Serilog;
 using Serilog.Core;
 using Serilog.Sinks.PostgreSQL;
@@ -15,10 +16,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddPersistenceServices();
+
+builder.Services.AddInfrastructureService();
+
 builder.Services.AddApplicationServices();
+
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>(); /// olmamasý lazým ama kolayýma geldi
 builder.Services.AddHttpContextAccessor();
 Logger log = new LoggerConfiguration()
@@ -66,7 +74,7 @@ app.UseHttpLogging();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-app.UseAuthorization();  /// burada bir hata çýkartabilir
+
 
 app.Use(async (context, next) =>
 {

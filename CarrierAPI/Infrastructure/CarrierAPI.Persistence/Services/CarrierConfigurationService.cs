@@ -10,11 +10,12 @@ namespace CarrierAPI.Persistence.Services
     {
         readonly ICarrierConfigurationReadRepository _carrierConfigurationReadRepository;
         readonly ICarrierConfigurationWriteRepository _carrierConfigurationWriteRepository;
-
+      
         public CarrierConfigurationService(ICarrierConfigurationReadRepository carrierConfigurationReadRepository, ICarrierConfigurationWriteRepository carrierConfigurationWriteRepository)
         {
             _carrierConfigurationReadRepository = carrierConfigurationReadRepository;
             _carrierConfigurationWriteRepository = carrierConfigurationWriteRepository;
+           
         }
 
         public async Task<bool> AddCarrierConfiguration(int CarrierId, int CarrierMaxDesi, int CarrierMinDesi, decimal CarrierCost)

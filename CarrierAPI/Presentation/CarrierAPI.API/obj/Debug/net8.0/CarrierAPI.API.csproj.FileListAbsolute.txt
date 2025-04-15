@@ -168,3 +168,7 @@ C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\De
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\Serilog.Sinks.PeriodicBatching.dll
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\Serilog.Sinks.PostgreSQL.dll
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\Serilog.Sinks.Seq.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\CarrierAPI.Infrastructure.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\CarrierAPI.Infrastructure.pdb

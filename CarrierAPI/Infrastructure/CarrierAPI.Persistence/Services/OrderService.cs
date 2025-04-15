@@ -1,6 +1,7 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
 using CarrierAPI.Application.Repostories;
 using CarrierAPI.Domain.Entities;
+using CarrierAPI.Domain.Entities.Events.Order;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,12 +16,13 @@ namespace CarrierAPI.Persistence.Services
         readonly IOrderReadRepository _orderReadRepository;
         readonly IOrderWriteRepository _orderWriteRepository;
         readonly ICarrierConfigurationReadRepository _carrierConfigurationReadRepository;
-
-        public OrderService(IOrderReadRepository orderReadRepository, IOrderWriteRepository orderWriteRepository, ICarrierConfigurationReadRepository carrierConfigurationReadRepository)
+        readonly IEventPublisher _eventPublisher;
+        public OrderService(IOrderReadRepository orderReadRepository, IOrderWriteRepository orderWriteRepository, ICarrierConfigurationReadRepository carrierConfigurationReadRepository, IEventPublisher eventPublisher)
         {
             _orderReadRepository = orderReadRepository;
             _orderWriteRepository = orderWriteRepository;
             _carrierConfigurationReadRepository = carrierConfigurationReadRepository;
+            _eventPublisher = eventPublisher;
         }
 
         public async Task<bool> AddOrder(int orderDesi)
@@ -58,9 +60,11 @@ namespace CarrierAPI.Persistence.Services
 
         public async Task<List<Order>> GetOrders()
         {
+            await _eventPublisher.PublishAsync(new GetOrdersEvent());
             try
             {
-               return await _orderReadRepository.GetAll(false).ToListAsync();
+               
+                return await _orderReadRepository.GetAll(false).ToListAsync();
             }
             catch
             {

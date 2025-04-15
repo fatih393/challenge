@@ -9,3 +9,9 @@ C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastr
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\obj\Debug\net8.0\refint\CarrierAPI.Infrastructure.dll
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\obj\Debug\net8.0\CarrierAPI.Infrastructure.pdb
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\obj\Debug\net8.0\ref\CarrierAPI.Infrastructure.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\bin\Debug\net8.0\CarrierAPI.Application.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\bin\Debug\net8.0\CarrierAPI.Domain.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\bin\Debug\net8.0\CarrierAPI.Application.pdb
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\bin\Debug\net8.0\CarrierAPI.Domain.pdb
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\obj\Debug\net8.0\CarrierAPI.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\obj\Debug\net8.0\CarrierA.11E6D38B.Up2Date

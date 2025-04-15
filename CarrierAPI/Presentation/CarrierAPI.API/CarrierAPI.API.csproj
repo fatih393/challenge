@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\CarrierAPI.Application\CarrierAPI.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\CarrierAPI.Infrastructure\CarrierAPI.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\CarrierAPI.Persistence\CarrierAPI.Persistence.csproj" />
   </ItemGroup>
 

@@ -1,6 +1,7 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
 using CarrierAPI.Application.Repostories;
 using CarrierAPI.Domain.Entities;
+using CarrierAPI.Domain.Entities.Events.Carrier;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,11 +15,12 @@ namespace CarrierAPI.Persistence.Services
     {
         readonly ICarrierWriteRepository _carrierWriteRepository;
         readonly ICarrierReadRepository _carrierReadRepository;
-
-        public CarrierService(ICarrierWriteRepository carrierWriteRepository, ICarrierReadRepository carrierReadRepository)
+        readonly IEventPublisher _eventPublisher;
+        public CarrierService(ICarrierWriteRepository carrierWriteRepository, ICarrierReadRepository carrierReadRepository, IEventPublisher eventPublisher)
         {
             _carrierWriteRepository = carrierWriteRepository;
             _carrierReadRepository = carrierReadRepository;
+            _eventPublisher = eventPublisher;
         }
 
         public async Task<bool> AddCarrierAsync(string CarrierName, bool CarrierIsActive, int CarrierPlusDesiCost)
@@ -50,6 +52,7 @@ namespace CarrierAPI.Persistence.Services
         public  async Task<List<Carrier>> GetCarrierAsync()
         {
             List<Carrier> carriers = await _carrierReadRepository.GetAll(false).ToListAsync();
+            await _eventPublisher.PublishAsync(new GetCarrierEvent());
             return carriers;
         }
 
