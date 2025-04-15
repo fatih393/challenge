@@ -7,14 +7,21 @@ using System.Threading.Tasks;
 
 namespace CarrierAPI.Domain.Entities.Events.Carrier
 {
-    public class GetCarrierEvent
+    public class PutCarrierEvent: BaseEntitiy
     {
         public DateTime CarrierDate { get; set; }
         public string Message { get; set; }
-        public GetCarrierEvent()
+        public string Name { get; set; }
+        public PutCarrierEvent(int id, string name)
         {
+            Id = id;
+            Name = name;
             CarrierDate = DateTime.UtcNow;
-            Message = "Kargo firmaları listelendi";
+            Message = "Kargo firması güncellendi";
+         
         }
+
+        
+    
     }
 }

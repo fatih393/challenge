@@ -32,13 +32,16 @@ namespace CarrierAPI.Persistence.Services
                 string carrierName = carriername?.CarrierName?.ToLower();
                 if (carrierName != null)
                     return false;
-            await _carrierWriteRepository.AddAsync(new()
-            {
-                CarrierName = CarrierName.ToLower(),
-                CarriersActive = CarrierIsActive,
-                CarrierPlusDesiCost = CarrierPlusDesiCost
-            });
-            await _carrierWriteRepository.Saveasync();
+                var newCarrier = new Carrier
+                {
+                    CarrierName = CarrierName.ToLower(),
+                    CarriersActive = CarrierIsActive,
+                    CarrierPlusDesiCost = CarrierPlusDesiCost
+                };
+
+                await _carrierWriteRepository.AddAsync(newCarrier);
+                await _carrierWriteRepository.Saveasync();
+                await _eventPublisher.PublishAsync(new PostCarrierEvent(newCarrier.Id, newCarrier.CarrierName));
                 return true;
             }
             catch
@@ -62,6 +65,7 @@ namespace CarrierAPI.Persistence.Services
             {
                 bool control = await _carrierWriteRepository.RemoveAsync(id);
                 await _carrierWriteRepository.Saveasync();
+                await _eventPublisher.PublishAsync(new RemoveCarrierEvent(id));
                 return control;
             }
             catch
@@ -80,6 +84,7 @@ namespace CarrierAPI.Persistence.Services
             carrier.CarriersActive = active;    
             carrier.CarrierPlusDesiCost= plusDesiCost;
             await _carrierWriteRepository.Saveasync();
+            await _eventPublisher.PublishAsync(new PutCarrierEvent(id, carrier.CarrierName));
             return true;
             }
             catch

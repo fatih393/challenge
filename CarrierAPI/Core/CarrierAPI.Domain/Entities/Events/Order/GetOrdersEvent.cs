@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace CarrierAPI.Domain.Entities.Events.Order
 {
-    public class GetOrdersEvent : BaseEntitiy
+    public class GetOrdersEvent
     {
         public DateTime OrderDate { get; set; }
+        public string Message { get; set; }
         public GetOrdersEvent()
         {
             OrderDate = DateTime.UtcNow;
+            Message = "Siparişler listelendi";
         }
     }
 }

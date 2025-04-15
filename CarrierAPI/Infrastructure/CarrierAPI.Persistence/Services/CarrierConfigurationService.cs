@@ -1,6 +1,7 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
 using CarrierAPI.Application.Repostories;
 using CarrierAPI.Domain.Entities;
+using CarrierAPI.Domain.Entities.Events.CarrierConfigurationEvent;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -10,12 +11,12 @@ namespace CarrierAPI.Persistence.Services
     {
         readonly ICarrierConfigurationReadRepository _carrierConfigurationReadRepository;
         readonly ICarrierConfigurationWriteRepository _carrierConfigurationWriteRepository;
-      
-        public CarrierConfigurationService(ICarrierConfigurationReadRepository carrierConfigurationReadRepository, ICarrierConfigurationWriteRepository carrierConfigurationWriteRepository)
+      readonly IEventPublisher _eventPublisher;
+        public CarrierConfigurationService(ICarrierConfigurationReadRepository carrierConfigurationReadRepository, ICarrierConfigurationWriteRepository carrierConfigurationWriteRepository, IEventPublisher eventPublisher)
         {
             _carrierConfigurationReadRepository = carrierConfigurationReadRepository;
             _carrierConfigurationWriteRepository = carrierConfigurationWriteRepository;
-           
+            _eventPublisher = eventPublisher;
         }
 
         public async Task<bool> AddCarrierConfiguration(int CarrierId, int CarrierMaxDesi, int CarrierMinDesi, decimal CarrierCost)
@@ -46,6 +47,7 @@ namespace CarrierAPI.Persistence.Services
             try
             {
                 List<CarrierConfiguration> carrierConfiguration = await _carrierConfigurationReadRepository.GetAll(false).ToListAsync();
+                await _eventPublisher.PublishAsync(new GetCarrierConfigurationsEvent());
                 return carrierConfiguration;
             }
             catch
