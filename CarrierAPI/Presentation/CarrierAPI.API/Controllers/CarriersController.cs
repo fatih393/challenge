@@ -1,7 +1,10 @@
-﻿using CarrierAPI.Application.Features.Commands.Carrier.CreateCarrier;
+﻿using CarrierAPI.Application.Abstractions.Services;
+using CarrierAPI.Application.Features.Commands.Carrier.CreateCarrier;
 using CarrierAPI.Application.Features.Commands.Carrier.RemoveCarrier;
 using CarrierAPI.Application.Features.Commands.Carrier.UpdateCarrier;
 using CarrierAPI.Application.Features.Queries.Carrier.GetCarrier;
+using CarrierAPI.Infrastructure.Service;
+using Hangfire;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +16,14 @@ namespace CarrierAPI.API.Controllers
     public class CarriersController : ControllerBase
     {
         readonly IMediator _mediator;
+        readonly IExampleJobService _exampleJobService;
+        readonly IMailService _mailService;
 
-        public CarriersController(IMediator mediator)
+        public CarriersController(IMediator mediator, IExampleJobService exampleJobService, IMailService mailService)
         {
             _mediator = mediator;
+            _exampleJobService = exampleJobService;
+            _mailService = mailService;
         }
 
         [HttpPost]
@@ -28,7 +35,16 @@ namespace CarrierAPI.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetCarriers([FromQuery] GetCarrierQueryRequest getCarrierQueryRequest)
         {
+            //await _mailService.SendMailAsync("yunusyildirim2002@gmail.com", "Bu bir deneme mailidir", "<strong>Test maili</strong>");
+          /*  await _mailService.SendMailAsync(new[]
+            {
+                "fatihhizli393@gmail.com",
+                "furkan_524@hotmail.com",
+                "yunusyildirim2002@gmail.com",
+                "174furkan@gmail.com"
+            }, "Bu bir deneme mailidir", "<strong>Toplu Test maili</strong>");*/
             GetCarrierQueryResponse response = await _mediator.Send(getCarrierQueryRequest);
+            BackgroundJob.Enqueue(() => _exampleJobService.RunExampleJob());
             return Ok(response);
         }
         [HttpDelete ("{Id}")]

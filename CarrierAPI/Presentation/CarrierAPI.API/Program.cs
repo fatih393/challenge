@@ -1,6 +1,7 @@
 using CarrierAPI.Persistence;
 using CarrierAPI.Application;
 using CarrierAPI.Infrastructure;
+using CarrierAPI.Infrastructure.Hangfire;
 using Serilog;
 using Serilog.Core;
 using Serilog.Sinks.PostgreSQL;
@@ -10,6 +11,9 @@ using Microsoft.AspNetCore.Identity;
 using Serilog.Context;
 using CarrierAPI.API.Configurations.ColumnWriters;
 using Microsoft.AspNetCore.HttpLogging;
+using Hangfire;
+using CarrierAPI.Infrastructure.Service;
+using CarrierAPI.Application.Abstractions.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -26,7 +30,7 @@ builder.Services.AddInfrastructureService();
 builder.Services.AddApplicationServices();
 
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddHangfireWithPostgreSql(builder.Configuration);
 builder.Services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>(); /// olmamasý lazým ama kolayýma geldi
 builder.Services.AddHttpContextAccessor();
 Logger log = new LoggerConfiguration()
@@ -72,7 +76,12 @@ if (app.Environment.IsDevelopment())
 app.UseSerilogRequestLogging();
 app.UseHttpLogging();
 app.UseHttpsRedirection();
-
+app.UseHangfireDashboard();
+RecurringJob.AddOrUpdate<IExampleJobService>(
+    "job",                                
+    job => job.RunExampleJob(),            
+    Cron.Minutely                          
+);
 app.UseAuthorization();
 
 

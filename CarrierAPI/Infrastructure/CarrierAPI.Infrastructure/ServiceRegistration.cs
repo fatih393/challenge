@@ -1,4 +1,5 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
+using CarrierAPI.Infrastructure.Service;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,8 @@ namespace CarrierAPI.Infrastructure
         {
 
             services.AddScoped<IEventPublisher, RabbitMqPublisher>();
-           
+            services.AddScoped<IExampleJobService, ExampleJobService>();
+            services.AddScoped<IMailService, MailService>();
 
         }
     }
