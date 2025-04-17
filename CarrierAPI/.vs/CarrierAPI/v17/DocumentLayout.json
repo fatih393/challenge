@@ -1,122 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{744424A0-C24D-4DDC-A854-19BD77B5B765}|Infrastructure\\CarrierAPI.Infrastructure\\CarrierAPI.Infrastructure.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.infrastructure\\service\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{744424A0-C24D-4DDC-A854-19BD77B5B765}|Infrastructure\\CarrierAPI.Infrastructure\\CarrierAPI.Infrastructure.csproj|solutionrelative:infrastructure\\carrierapi.infrastructure\\service\\mailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E127BD2F-427D-4270-8784-AA8569C31CEF}|Presentation\\CarrierAPI.API\\CarrierAPI.API.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\presentation\\carrierapi.api\\controllers\\carrierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E127BD2F-427D-4270-8784-AA8569C31CEF}|Presentation\\CarrierAPI.API\\CarrierAPI.API.csproj|solutionrelative:presentation\\carrierapi.api\\controllers\\carrierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{744424A0-C24D-4DDC-A854-19BD77B5B765}|Infrastructure\\CarrierAPI.Infrastructure\\CarrierAPI.Infrastructure.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.infrastructure\\service\\examplejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{744424A0-C24D-4DDC-A854-19BD77B5B765}|Infrastructure\\CarrierAPI.Infrastructure\\CarrierAPI.Infrastructure.csproj|solutionrelative:infrastructure\\carrierapi.infrastructure\\service\\examplejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{744424A0-C24D-4DDC-A854-19BD77B5B765}|Infrastructure\\CarrierAPI.Infrastructure\\CarrierAPI.Infrastructure.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\infrastructure\\carrierapi.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{744424A0-C24D-4DDC-A854-19BD77B5B765}|Infrastructure\\CarrierAPI.Infrastructure\\CarrierAPI.Infrastructure.csproj|solutionrelative:infrastructure\\carrierapi.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E127BD2F-427D-4270-8784-AA8569C31CEF}|Presentation\\CarrierAPI.API\\CarrierAPI.API.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\presentation\\carrierapi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E127BD2F-427D-4270-8784-AA8569C31CEF}|Presentation\\CarrierAPI.API\\CarrierAPI.API.csproj|solutionrelative:presentation\\carrierapi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|c:\\users\\fatih\\desktop\\challenge-2\\carrierapi\\core\\carrierapi.application\\abstractions\\services\\imailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B95FB50E-8A79-4970-8849-68D72413EB2C}|Core\\CarrierAPI.Application\\CarrierAPI.Application.csproj|solutionrelative:core\\carrierapi.application\\abstractions\\services\\imailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ExampleJobService.cs",
-              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Infrastructure\\Service\\ExampleJobService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\CarrierAPI.Infrastructure\\Service\\ExampleJobService.cs",
-              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Infrastructure\\Service\\ExampleJobService.cs",
-              "RelativeToolTip": "Infrastructure\\CarrierAPI.Infrastructure\\Service\\ExampleJobService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T09:42:01.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Infrastructure\\ServiceRegistration.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\CarrierAPI.Infrastructure\\ServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Infrastructure\\ServiceRegistration.cs",
-              "RelativeToolTip": "Infrastructure\\CarrierAPI.Infrastructure\\ServiceRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T09:26:48.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CarriersController.cs",
-              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Presentation\\CarrierAPI.API\\Controllers\\CarriersController.cs",
-              "RelativeDocumentMoniker": "Presentation\\CarrierAPI.API\\Controllers\\CarriersController.cs",
-              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Presentation\\CarrierAPI.API\\Controllers\\CarriersController.cs",
-              "RelativeToolTip": "Presentation\\CarrierAPI.API\\Controllers\\CarriersController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCwAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T09:24:27.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Presentation\\CarrierAPI.API\\appsettings.json",
-              "RelativeDocumentMoniker": "Presentation\\CarrierAPI.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Presentation\\CarrierAPI.API\\appsettings.json",
-              "RelativeToolTip": "Presentation\\CarrierAPI.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-16T09:23:57.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MailService.cs",
-              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Infrastructure\\Service\\MailService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\CarrierAPI.Infrastructure\\Service\\MailService.cs",
-              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Infrastructure\\Service\\MailService.cs",
-              "RelativeToolTip": "Infrastructure\\CarrierAPI.Infrastructure\\Service\\MailService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T09:15:30.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IMailService.cs",
-              "DocumentMoniker": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Abstractions\\Services\\IMailService.cs",
-              "RelativeDocumentMoniker": "Core\\CarrierAPI.Application\\Abstractions\\Services\\IMailService.cs",
-              "ToolTip": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Core\\CarrierAPI.Application\\Abstractions\\Services\\IMailService.cs",
-              "RelativeToolTip": "Core\\CarrierAPI.Application\\Abstractions\\Services\\IMailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T09:11:54.978Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

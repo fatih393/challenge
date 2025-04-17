@@ -2,6 +2,8 @@
 using CarrierAPI.Application.Repostories;
 using CarrierAPI.Domain.Entities;
 using CarrierAPI.Domain.Entities.Events.Carrier;
+using CarrierAPI.Domain.Entities.Events.Order;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,11 +18,13 @@ namespace CarrierAPI.Persistence.Services
         readonly ICarrierWriteRepository _carrierWriteRepository;
         readonly ICarrierReadRepository _carrierReadRepository;
         readonly IEventPublisher _eventPublisher;
-        public CarrierService(ICarrierWriteRepository carrierWriteRepository, ICarrierReadRepository carrierReadRepository, IEventPublisher eventPublisher)
+        private readonly IBus _bus;
+        public CarrierService(ICarrierWriteRepository carrierWriteRepository, ICarrierReadRepository carrierReadRepository, IEventPublisher eventPublisher, IBus bus)
         {
             _carrierWriteRepository = carrierWriteRepository;
             _carrierReadRepository = carrierReadRepository;
             _eventPublisher = eventPublisher;
+            _bus = bus;
         }
 
         public async Task<bool> AddCarrierAsync(string CarrierName, bool CarrierIsActive, int CarrierPlusDesiCost)
@@ -42,6 +46,7 @@ namespace CarrierAPI.Persistence.Services
                 await _carrierWriteRepository.AddAsync(newCarrier);
                 await _carrierWriteRepository.Saveasync();
                 await _eventPublisher.PublishAsync(new PostCarrierEvent(newCarrier.Id, newCarrier.CarrierName));
+               
                 return true;
             }
             catch
@@ -56,6 +61,7 @@ namespace CarrierAPI.Persistence.Services
         {
             List<Carrier> carriers = await _carrierReadRepository.GetAll(false).ToListAsync();
             await _eventPublisher.PublishAsync(new GetCarrierEvent());
+       
             return carriers;
         }
 

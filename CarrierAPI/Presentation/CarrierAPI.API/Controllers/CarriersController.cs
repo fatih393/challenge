@@ -44,7 +44,7 @@ namespace CarrierAPI.API.Controllers
                 "174furkan@gmail.com"
             }, "Bu bir deneme mailidir", "<strong>Toplu Test maili</strong>");*/
             GetCarrierQueryResponse response = await _mediator.Send(getCarrierQueryRequest);
-            BackgroundJob.Enqueue(() => _exampleJobService.RunExampleJob());
+           // BackgroundJob.Enqueue(() => _exampleJobService.RunExampleJob());
             return Ok(response);
         }
         [HttpDelete ("{Id}")]

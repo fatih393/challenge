@@ -20,10 +20,10 @@ namespace CarrierAPI.Infrastructure.Service
         {
             await _mailService.SendMailAsync(new[]
             {
-                "fatihhizli393@gmail.com",
-                "furkan_524@hotmail.com",
-                "yunusyildirim2002@gmail.com",
-                "174furkan@gmail.com"
+                "fatihhizli393@gmail.com"
+               // "furkan_524@hotmail.com",
+              //  "yunusyildirim2002@gmail.com",
+              //  "174furkan@gmail.com"
             }, "Bu bir deneme mailidir", "<strong>Toplu Test maili</strong>");
             Console.WriteLine($"Job çalıştı: {DateTime.Now}");
         }

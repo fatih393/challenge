@@ -25,7 +25,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddPersistenceServices();
 
-builder.Services.AddInfrastructureService();
+builder.Services.AddInfrastructureService(builder.Configuration);
 
 builder.Services.AddApplicationServices();
 
@@ -77,11 +77,11 @@ app.UseSerilogRequestLogging();
 app.UseHttpLogging();
 app.UseHttpsRedirection();
 app.UseHangfireDashboard();
-RecurringJob.AddOrUpdate<IExampleJobService>(
+/*RecurringJob.AddOrUpdate<IExampleJobService>(
     "job",                                
     job => job.RunExampleJob(),            
     Cron.Minutely                          
-);
+);*/ //Her dakika jobun çalýþmasý
 app.UseAuthorization();
 
 

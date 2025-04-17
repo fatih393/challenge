@@ -4,47 +4,30 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System.Text;
-
+using MassTransit;
 
 namespace CarrierAPI.Infrastructure
 {
     public class RabbitMqPublisher : IEventPublisher
     {
-        private readonly IConfiguration _configuration;
+        private readonly IBus _bus;
 
-        public RabbitMqPublisher(IConfiguration configuration)
+        public RabbitMqPublisher(IBus bus)
         {
-            _configuration = configuration;
+            _bus = bus;
         }
 
-        public async Task PublishAsync<T>(T @event) where T : class
+        public async Task PublishAsync<T>(T message)
         {
-            var factory = new ConnectionFactory
+            if (message == null)
             {
-                HostName = _configuration["RabbitMQ:Host"],
-                UserName = _configuration["RabbitMQ:Username"],
-                Password = _configuration["RabbitMQ:Password"]
-            };
+                throw new ArgumentNullException(nameof(message), "Event message cannot be null");
+            }
 
-            using var connection = factory.CreateConnection();
-            using var channel = connection.CreateModel();
+          //  var jsonMessage = JsonConvert.SerializeObject(message);
+            Console.WriteLine("Publishing event: " + message);
 
-            var queueName = typeof(T).Name;
-
-            channel.QueueDeclare(queue: queueName,
-                                 durable: true,
-                                 exclusive: false,
-                                 autoDelete: false,
-                                 arguments: null);
-
-            var body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(@event));
-
-            channel.BasicPublish(exchange: "",
-                                 routingKey: queueName,
-                                 basicProperties: null,
-                                 body: body);
-
-            await Task.CompletedTask;
+            await _bus.Publish(message);
         }
     }
 }

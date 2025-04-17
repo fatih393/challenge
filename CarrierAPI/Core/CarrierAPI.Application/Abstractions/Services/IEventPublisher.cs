@@ -5,6 +5,6 @@ namespace CarrierAPI.Application.Abstractions.Services
 {
        public interface IEventPublisher
     {
-        Task PublishAsync<T>(T @event) where T : class;
+        Task PublishAsync<T>(T message);
     }
 }
