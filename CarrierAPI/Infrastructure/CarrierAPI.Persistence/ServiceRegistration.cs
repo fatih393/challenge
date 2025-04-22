@@ -7,17 +7,19 @@ using CarrierAPI.Persistence.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
+using Microsoft.Extensions.Caching.StackExchangeRedis;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace CarrierAPI.Persistence
 {
     public static  class ServiceRegistration
     {
-        public static void AddPersistenceServices(this IServiceCollection services) { 
+       
+        public static void AddPersistenceServices(this IServiceCollection services, IConfiguration configuration) { 
             services.AddDbContext<CarrierAPIContext>(options => options.UseNpgsql(Configuration.ConnectionString));
             services.AddIdentity<AppUser, IdentityRole<int>>()
             .AddEntityFrameworkStores<CarrierAPIContext>();
@@ -31,6 +33,11 @@ namespace CarrierAPI.Persistence
             services.AddScoped<ICarrierConfigurationReadRepository, CarrierConfigurationReadRepository>();
             services.AddScoped<IOrderReadRepository, OrderReadRepository>();
             services.AddScoped<IOrderWriteRepository, OrderWriteRepository>();
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = configuration.GetConnectionString("Redis");
+                options.InstanceName = "CarrierAPI_"; 
+            });
 
         }
         

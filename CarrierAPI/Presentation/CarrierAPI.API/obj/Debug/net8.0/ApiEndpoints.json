@@ -1,58 +1,5 @@
 [
   {
-    "ContainingType": "CarrierAPI.API.Controllers.CacheController",
-    "Method": "GetData",
-    "RelativePath": "api/Cache/cache/{key}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "key",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CarrierAPI.API.Controllers.CacheController",
-    "Method": "Delete",
-    "RelativePath": "api/Cache/cache/delete{key}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "key",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CarrierAPI.API.Controllers.CacheController",
-    "Method": "SetData",
-    "RelativePath": "api/Cache/cache/set",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "key",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "value",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "CarrierAPI.API.Controllers.CarrierConfigurationsController",
     "Method": "AddCarrierConfiguration",
     "RelativePath": "api/CarrierConfigurations",

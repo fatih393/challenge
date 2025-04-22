@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CarrierAPI.Persistence.Services
@@ -17,12 +18,14 @@ namespace CarrierAPI.Persistence.Services
         readonly IOrderWriteRepository _orderWriteRepository;
         readonly ICarrierConfigurationReadRepository _carrierConfigurationReadRepository;
         readonly IEventPublisher _eventPublisher;
-        public OrderService(IOrderReadRepository orderReadRepository, IOrderWriteRepository orderWriteRepository, ICarrierConfigurationReadRepository carrierConfigurationReadRepository, IEventPublisher eventPublisher)
+        private readonly IRedisCacheServices _redisCacheService;
+        public OrderService(IOrderReadRepository orderReadRepository, IOrderWriteRepository orderWriteRepository, ICarrierConfigurationReadRepository carrierConfigurationReadRepository, IEventPublisher eventPublisher, IRedisCacheServices redisCacheService)
         {
             _orderReadRepository = orderReadRepository;
             _orderWriteRepository = orderWriteRepository;
             _carrierConfigurationReadRepository = carrierConfigurationReadRepository;
             _eventPublisher = eventPublisher;
+            _redisCacheService = redisCacheService;
         }
 
         public async Task<bool> AddOrder(int orderDesi)
@@ -61,11 +64,22 @@ namespace CarrierAPI.Persistence.Services
 
         public async Task<List<Order>> GetOrders()
         {
-            await _eventPublisher.PublishAsync(new GetOrdersEvent());
+            string cacheKey = "OrderList";
+           
             try
             {
-               
-                return await _orderReadRepository.GetAll(false).ToListAsync();
+                var cachedData = await _redisCacheService.GetCacheAsync<List<Order>>(cacheKey);
+                if (cachedData != null)
+                {
+                    Console.WriteLine(cacheKey + "Cache'ten geldi.");
+                    return cachedData;
+                }
+                List<Order> orders =  await _orderReadRepository.GetAll(false).ToListAsync();
+                await _redisCacheService.SetCacheAsync(cacheKey, orders, TimeSpan.FromMinutes(10), TimeSpan.FromMinutes(5));
+
+                Console.WriteLine(cacheKey + " Cache'e eklendi.");
+                await _eventPublisher.PublishAsync(new GetOrdersEvent());
+                return orders;
             }
             catch
             {

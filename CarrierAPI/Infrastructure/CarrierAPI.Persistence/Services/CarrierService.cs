@@ -5,8 +5,9 @@ using CarrierAPI.Domain.Entities.Events.Carrier;
 using CarrierAPI.Domain.Entities.Events.Order;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,12 +20,14 @@ namespace CarrierAPI.Persistence.Services
         readonly ICarrierReadRepository _carrierReadRepository;
         readonly IEventPublisher _eventPublisher;
         private readonly IBus _bus;
-        public CarrierService(ICarrierWriteRepository carrierWriteRepository, ICarrierReadRepository carrierReadRepository, IEventPublisher eventPublisher, IBus bus)
+        private readonly IRedisCacheServices _redisCacheService;
+        public CarrierService(ICarrierWriteRepository carrierWriteRepository, ICarrierReadRepository carrierReadRepository, IEventPublisher eventPublisher, IBus bus, IRedisCacheServices redisCacheService)
         {
             _carrierWriteRepository = carrierWriteRepository;
             _carrierReadRepository = carrierReadRepository;
             _eventPublisher = eventPublisher;
             _bus = bus;
+            _redisCacheService = redisCacheService;
         }
 
         public async Task<bool> AddCarrierAsync(string CarrierName, bool CarrierIsActive, int CarrierPlusDesiCost)
@@ -59,9 +62,26 @@ namespace CarrierAPI.Persistence.Services
 
         public  async Task<List<Carrier>> GetCarrierAsync()
         {
+            string cacheKey = "CarrierList";
+
+           // cache de var mı yok mu varsa döndür
+            var cachedData = await _redisCacheService.GetCacheAsync<List<Carrier>>(cacheKey);
+            if (cachedData != null)
+            {
+                Console.WriteLine(cacheKey + " Cache'ten geldi.");
+                return cachedData;
+            }
+
+            // yoksa getir 
             List<Carrier> carriers = await _carrierReadRepository.GetAll(false).ToListAsync();
+
+            // cache yaz
+            await _redisCacheService.SetCacheAsync(cacheKey, carriers, TimeSpan.FromMinutes(10), TimeSpan.FromMinutes(5));
+
+            Console.WriteLine(cacheKey + " Cache'e eklendi.");
+
             await _eventPublisher.PublishAsync(new GetCarrierEvent());
-       
+
             return carriers;
         }
 

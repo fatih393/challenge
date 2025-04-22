@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarrierAPI.Domain.Entities.Item;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,7 @@ namespace CarrierAPI.Application.Abstractions.Services
 {
     public interface IRedisCacheServices
     {
-        Task ClearAsync(string key);
-        Task<string> GetValueAsync(string key);
-        Task<bool> SetValueAsync(string key, string value);
+        Task<T> GetCacheAsync<T>(string cacheKey);
+        Task SetCacheAsync<T>(string cacheKey, T data, TimeSpan absoluteExpiration, TimeSpan slidingExpiration);
     }
 }

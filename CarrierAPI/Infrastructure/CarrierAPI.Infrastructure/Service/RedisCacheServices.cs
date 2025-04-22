@@ -1,4 +1,7 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
+using CarrierAPI.Domain.Entities.Item;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
 using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
@@ -10,26 +13,32 @@ namespace CarrierAPI.Infrastructure.Service
 {
     public class RedisCacheServices: IRedisCacheServices
     {
-        private readonly IConnectionMultiplexer _connectionMultiplexer;
-        private readonly IDatabaseAsync _databaseAsync;
+        private readonly IDistributedCache _cache;
 
-        public RedisCacheServices(IConnectionMultiplexer connectionMultiplexer)
+        public RedisCacheServices(IDistributedCache cache)
         {
-            _connectionMultiplexer = connectionMultiplexer;
-            _databaseAsync = _connectionMultiplexer.GetDatabase();
-        }
-        public async Task ClearAsync(string key)
-        {
-            await _databaseAsync.KeyDeleteAsync(key);
+            _cache = cache;
         }
 
-        public async Task<string> GetValueAsync(string key)
+        public async Task<T> GetCacheAsync<T>(string cacheKey)
         {
-           return await _databaseAsync.StringGetAsync(key);
+            var cachedData = await _cache.GetStringAsync(cacheKey);
+            if (!string.IsNullOrEmpty(cachedData))
+            {
+                return JsonConvert.DeserializeObject<T>(cachedData);
+            }
+
+            return default(T);
         }
-        public async Task<bool> SetValueAsync(string key, string value)
+
+        public async Task SetCacheAsync<T>(string cacheKey, T data, TimeSpan absoluteExpiration, TimeSpan slidingExpiration)
         {
-           return await _databaseAsync.StringSetAsync(key, value);
+            var jsonData = JsonConvert.SerializeObject(data);
+            await _cache.SetStringAsync(cacheKey, jsonData, new DistributedCacheEntryOptions
+            {
+                AbsoluteExpirationRelativeToNow = absoluteExpiration,
+                SlidingExpiration = slidingExpiration
+            });
         }
     }
 }
