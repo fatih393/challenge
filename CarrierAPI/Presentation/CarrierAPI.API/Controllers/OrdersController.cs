@@ -20,20 +20,29 @@ namespace CarrierAPI.API.Controllers
         [HttpPost]
         public async Task<IActionResult> AddOrder(CreateOrderCommandRequest createOrderCommandRequest)
         {
-            CreateOrderCommandResponse response = await _mediator.Send(createOrderCommandRequest);
-            return Ok(response);
+            var response = await _mediator.Send(createOrderCommandRequest);
+            if (response.Success)
+                return Ok(response);
+            else
+                return BadRequest(response);
         }
         [HttpGet]
         public async Task<IActionResult> ListOrder([FromQuery] GetOrderQueryRequest getOrderQueryRequest)
         {
-            GetOrderQueryResponse response = await _mediator.Send(getOrderQueryRequest);
-            return Ok(response);
+            var response = await _mediator.Send(getOrderQueryRequest);
+            if (response.Success)
+                return Ok(response);
+            else
+                return BadRequest(response);
         }
         [HttpDelete("{Id}")]
         public async Task<IActionResult> RemoveOrder([FromRoute]RemoveOrderCommandRequest removeOrderCommandRequest)
         {
-            RemoveOrderCommandResponse response = await _mediator.Send(removeOrderCommandRequest);
-            return Ok(response);
+            var response = await _mediator.Send(removeOrderCommandRequest);
+            if (response.Success)
+                return Ok(response);
+            else
+                return BadRequest(response);
         }
     }
 }

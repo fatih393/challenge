@@ -1,4 +1,6 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
+using CarrierAPI.Application.Features.Queries.CarrierConfiguration.GetCarrierConfiguration;
+using CarrierAPI.Domain.Entities;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CarrierAPI.Application.Features.Queries.Order.GetOrder
 {
-    public class GetOrderQueryHandler : IRequestHandler<GetOrderQueryRequest, GetOrderQueryResponse>
+    public class GetOrderQueryHandler : IRequestHandler<GetOrderQueryRequest, DataResult<GetOrderQueryResponse>>
     {
         readonly IOrderService _orderService;
         readonly ILogger<GetOrderQueryHandler> _logger;
@@ -19,20 +21,17 @@ namespace CarrierAPI.Application.Features.Queries.Order.GetOrder
             _logger = logger;
         }
 
-        public async Task<GetOrderQueryResponse> Handle(GetOrderQueryRequest request, CancellationToken cancellationToken)
+        public async Task<DataResult<GetOrderQueryResponse>> Handle(GetOrderQueryRequest request, CancellationToken cancellationToken)
         {
             _logger.LogInformation("Siparişleri listeleme");
             List<Domain.Entities.Order> order = await _orderService.GetOrders();
             if (order == null)
-                return new()
-                {
-                    Message = "Listeleme başarısız"
-                };
-            return new()
+                return new ErrorDataResult<GetOrderQueryResponse>();
+            var response = new GetOrderQueryResponse
             {
-                orders = order,
-                Message = "Listeleme başarılı"
+                orders = order
             };
+            return new SuccessDataResult<GetOrderQueryResponse>(response, "Siparişler başarıyla listelendi.");
         }
     }
 }

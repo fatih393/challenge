@@ -8,6 +8,7 @@ using Hangfire;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using static MassTransit.ValidationResultExtensions;
 
 namespace CarrierAPI.API.Controllers
 {
@@ -18,46 +19,61 @@ namespace CarrierAPI.API.Controllers
         readonly IMediator _mediator;
         readonly IExampleJobService _exampleJobService;
         readonly IMailService _mailService;
+       
 
         public CarriersController(IMediator mediator, IExampleJobService exampleJobService, IMailService mailService)
         {
             _mediator = mediator;
             _exampleJobService = exampleJobService;
             _mailService = mailService;
+           
         }
 
         [HttpPost]
         public async Task<IActionResult> AddCarrier(CreateCarrierCommandRequest createCarrierCommandRequest)
         {
-            CreateCarrierCommandResponse response = await _mediator.Send(createCarrierCommandRequest);
-            return Ok(response);
+            var response = await _mediator.Send(createCarrierCommandRequest);
+            if (response.Success)
+                return Ok(response);
+            else
+                return BadRequest(response);
         }
         [HttpGet]
         public async Task<IActionResult> GetCarriers([FromQuery] GetCarrierQueryRequest getCarrierQueryRequest)
         {
             //await _mailService.SendMailAsync("yunusyildirim2002@gmail.com", "Bu bir deneme mailidir", "<strong>Test maili</strong>");
-          /*  await _mailService.SendMailAsync(new[]
-            {
-                "fatihhizli393@gmail.com",
-                "furkan_524@hotmail.com",
-                "yunusyildirim2002@gmail.com",
-                "174furkan@gmail.com"
-            }, "Bu bir deneme mailidir", "<strong>Toplu Test maili</strong>");*/
-            GetCarrierQueryResponse response = await _mediator.Send(getCarrierQueryRequest);
-           // BackgroundJob.Enqueue(() => _exampleJobService.RunExampleJob());
-            return Ok(response);
+            /*  await _mailService.SendMailAsync(new[]
+              {
+                  "fatihhizli393@gmail.com",
+                  "furkan_524@hotmail.com",
+                  "yunusyildirim2002@gmail.com",
+                  "174furkan@gmail.com"
+              }, "Bu bir deneme mailidir", "<strong>Toplu Test maili</strong>");*/
+            
+            var response = await _mediator.Send(getCarrierQueryRequest);
+            // BackgroundJob.Enqueue(() => _exampleJobService.RunExampleJob());
+            if (response.Success)
+                return Ok(response); 
+            else
+                return BadRequest(response);
         }
         [HttpDelete ("{Id}")]
         public async Task<IActionResult> RemoveCarriers([FromRoute] RemoveCarrierCommandRequest removeCarrierCommandRequest)
         {
-            RemoveCarrierCommandResponse response = await _mediator.Send(removeCarrierCommandRequest);
-            return Ok(response);
+            var response = await _mediator.Send(removeCarrierCommandRequest);
+            if (response.Success)
+                return Ok(response);
+            else
+                return BadRequest(response);
         }
         [HttpPut]
         public async Task<IActionResult> UpdateCarriers(UpdateCarrierCommandRequest updateCarrierCommandRequest)
         {
-            UpdateCarrierCommandResponse response = await _mediator.Send(updateCarrierCommandRequest);
-            return Ok(response);
+            var response = await _mediator.Send(updateCarrierCommandRequest);
+            if (response.Success)
+                return Ok(response);
+            else
+                return BadRequest(response);
         }
     
     }

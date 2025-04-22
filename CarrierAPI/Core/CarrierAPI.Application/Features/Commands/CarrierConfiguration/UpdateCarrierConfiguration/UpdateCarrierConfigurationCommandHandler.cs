@@ -1,11 +1,12 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
+using CarrierAPI.Application.Features.Commands.CarrierConfiguration.RemoveCarrierConfiguration;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
 
 namespace CarrierAPI.Application.Features.Commands.CarrierConfiguration.UpdateCarrierConfiguration
 {
-    public class UpdateCarrierConfigurationCommandHandler : IRequestHandler<UpdateCarrierConfigurationCommandRequest, UpdateCarrierConfigurationCommandResponse>
+    public class UpdateCarrierConfigurationCommandHandler : IRequestHandler<UpdateCarrierConfigurationCommandRequest, DataResult<UpdateCarrierConfigurationCommandResponse>>
     {
         readonly ICarrierConfigurationService _carrierConfigurationService;
         readonly ILogger<UpdateCarrierConfigurationCommandHandler> _logger;
@@ -15,7 +16,7 @@ namespace CarrierAPI.Application.Features.Commands.CarrierConfiguration.UpdateCa
             _logger = logger;
         }
 
-        public async Task<UpdateCarrierConfigurationCommandResponse> Handle(UpdateCarrierConfigurationCommandRequest request, CancellationToken cancellationToken)
+        public async Task<DataResult<UpdateCarrierConfigurationCommandResponse>> Handle(UpdateCarrierConfigurationCommandRequest request, CancellationToken cancellationToken)
         {
             _logger.LogInformation("Konfigürasyon güncelleme");
             bool control = await _carrierConfigurationService.UpdateCarrierConfigurationAsync(
@@ -25,14 +26,8 @@ namespace CarrierAPI.Application.Features.Commands.CarrierConfiguration.UpdateCa
                 request.CarrierMinDesi,
                 request.CarrierCost);
             if (control)
-                return new()
-                {
-                    Message = "Güncelleme başarılı"
-                };
-            return new()
-            {
-                Message = "Güncelleme işleminde bir sorun oluştu"
-            };
+                return new SuccessDataResult<UpdateCarrierConfigurationCommandResponse>(null, "Kayıt başarıyla güncellendi");
+            return new ErrorDataResult<UpdateCarrierConfigurationCommandResponse>();
         }
     }
 }

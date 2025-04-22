@@ -195,3 +195,10 @@ C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\De
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\MassTransit.dll
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\MassTransit.Abstractions.dll
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\WebDriver.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\WebDriver.Support.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Presentation\CarrierAPI.API\bin\Debug\net8.0\StackExchange.Redis.dll

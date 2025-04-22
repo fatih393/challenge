@@ -2,7 +2,7 @@
 
 namespace CarrierAPI.Application.Features.Commands.CarrierConfiguration.UpdateCarrierConfiguration
 {
-    public class UpdateCarrierConfigurationCommandRequest: IRequest<UpdateCarrierConfigurationCommandResponse>
+    public class UpdateCarrierConfigurationCommandRequest: IRequest<DataResult<UpdateCarrierConfigurationCommandResponse>>
     {
         public int Id { get; set; }
         public int CarrierId { get; set; }

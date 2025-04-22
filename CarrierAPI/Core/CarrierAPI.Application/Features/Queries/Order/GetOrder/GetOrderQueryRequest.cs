@@ -2,7 +2,7 @@
 
 namespace CarrierAPI.Application.Features.Queries.Order.GetOrder
 {
-    public class GetOrderQueryRequest: IRequest<GetOrderQueryResponse>
+    public class GetOrderQueryRequest: IRequest<DataResult<GetOrderQueryResponse>>
     {
     }
 }

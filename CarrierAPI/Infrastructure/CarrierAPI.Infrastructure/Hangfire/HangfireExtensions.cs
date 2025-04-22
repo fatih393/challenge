@@ -17,6 +17,7 @@ namespace CarrierAPI.Infrastructure.Hangfire
             services.AddHangfire(config =>
             {
                 config.UsePostgreSqlStorage(configuration.GetConnectionString("PostgreSQL"));
+               // GlobalConfiguration.Configuration.UseSqlServerStorage("db_connection");
             });
 
             services.AddHangfireServer();

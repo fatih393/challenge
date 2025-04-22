@@ -40,7 +40,7 @@ namespace CarrierAPI.Infrastructure.Service
                 smtp.Port = 587;
                 smtp.EnableSsl = true;
                 smtp.Host = _configuration["Mail:Host"];
-                await smtp.SendMailAsync(mail);
+              //  await smtp.SendMailAsync(mail);
 
             }
         }

@@ -15,3 +15,6 @@ C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastr
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\bin\Debug\net8.0\CarrierAPI.Domain.pdb
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\obj\Debug\net8.0\CarrierAPI.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\obj\Debug\net8.0\CarrierA.11E6D38B.Up2Date
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+C:\Users\Fatih\Desktop\Challenge-2\CarrierAPI\Infrastructure\CarrierAPI.Infrastructure\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe

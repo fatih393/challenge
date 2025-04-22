@@ -2,7 +2,7 @@
 
 namespace CarrierAPI.Application.Features.Commands.CarrierConfiguration.CreateCarrierConfiguration
 {
-    public class CreateCarrierConfigurationCommandRequest: IRequest<CreateCarrierConfigurationCommandResponse>
+    public class CreateCarrierConfigurationCommandRequest: IRequest<DataResult<CreateCarrierConfigurationCommandResponse>>
     {
         public int CarrierId { get; set; }
         public int CarrierMaxDesi { get; set; }

@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.HttpLogging;
 using Hangfire;
 using CarrierAPI.Infrastructure.Service;
 using CarrierAPI.Application.Abstractions.Services;
+using StackExchange.Redis;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -30,6 +31,10 @@ builder.Services.AddInfrastructureService(builder.Configuration);
 builder.Services.AddApplicationServices();
 
 builder.Services.AddSwaggerGen();
+
+var redisConnection = ConnectionMultiplexer.Connect(builder.Configuration.GetConnectionString("Redis"));
+builder.Services.AddSingleton<IConnectionMultiplexer>(redisConnection);
+
 builder.Services.AddHangfireWithPostgreSql(builder.Configuration);
 builder.Services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>(); /// olmamasý lazým ama kolayýma geldi
 builder.Services.AddHttpContextAccessor();

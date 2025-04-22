@@ -2,7 +2,7 @@
 
 namespace CarrierAPI.Application.Features.Queries.CarrierConfiguration.GetCarrierConfiguration
 {
-    public class GetCarrierConfigurationQueryRequest: IRequest<GetCarrierConfigurationQueryResponse>
+    public class GetCarrierConfigurationQueryRequest: IRequest<DataResult<GetCarrierConfigurationQueryResponse>>
     {
     }
 }

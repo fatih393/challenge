@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace CarrierAPI.Application.Features.Queries.Carrier.GetCarrier
 {
-    public class GetCarrierQueryHandler : IRequestHandler<GetCarrierQueryRequest, GetCarrierQueryResponse>
+    public class GetCarrierQueryHandler : IRequestHandler<GetCarrierQueryRequest, DataResult<GetCarrierQueryResponse>>
     {
         readonly ICarrierService _carrierService;
         readonly ILogger<GetCarrierQueryHandler> _logger;
@@ -15,15 +15,23 @@ namespace CarrierAPI.Application.Features.Queries.Carrier.GetCarrier
             _logger = logger;
         }
 
-        public async Task<GetCarrierQueryResponse> Handle(GetCarrierQueryRequest request, CancellationToken cancellationToken)
+        public async Task<DataResult<GetCarrierQueryResponse>> Handle(GetCarrierQueryRequest request, CancellationToken cancellationToken)
         {
-
+            try
+{
            List< Domain.Entities.Carrier > carriers = await _carrierService.GetCarrierAsync();
             _logger.LogInformation("Kargo şirketleri listelendi");
-            return new()
+                return new SuccessDataResult<GetCarrierQueryResponse>(
+                     new GetCarrierQueryResponse { carriers = carriers },
+                    "Kargo şirketleri başarıyla listelendi."
+                    ); 
+            }
+            catch (Exception ex)
             {
-                carriers = carriers,
-            };
+                _logger.LogError(ex, "Kargo şirketleri listelenirken bir hata oluştu.");
+                return new ErrorDataResult<GetCarrierQueryResponse>();
+            }
+
         }
     }
 }

@@ -1,11 +1,12 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
+using CarrierAPI.Application.Features.Commands.CarrierConfiguration.UpdateCarrierConfiguration;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
 
 namespace CarrierAPI.Application.Features.Commands.Order.CreateOrder
 {
-    public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommandRequest, CreateOrderCommandResponse>
+    public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommandRequest, DataResult<CreateOrderCommandResponse>>
     {
         readonly IOrderService _orderService;
         readonly ILogger<CreateOrderCommandHandler> _logger;
@@ -15,19 +16,13 @@ namespace CarrierAPI.Application.Features.Commands.Order.CreateOrder
             _logger = logger;
         }
 
-        public async Task<CreateOrderCommandResponse> Handle(CreateOrderCommandRequest request, CancellationToken cancellationToken)
+        public async Task<DataResult<CreateOrderCommandResponse>> Handle(CreateOrderCommandRequest request, CancellationToken cancellationToken)
         {
             _logger.LogInformation("Sipariş ekleme");
             bool control = await _orderService.AddOrder(request.OrderDesi);
             if (control)
-                return new()
-                {
-                    Message = "Sipariş başarıyla alındı"
-                };
-            return new()
-            {
-                Message = "Sipariş alınırken bir hata oluştu"
-            };
+                return new SuccessDataResult<CreateOrderCommandResponse>(null, "Sipariş başarıyla oluşturuldu");
+            return new ErrorDataResult<CreateOrderCommandResponse>();
         }
     }
 }

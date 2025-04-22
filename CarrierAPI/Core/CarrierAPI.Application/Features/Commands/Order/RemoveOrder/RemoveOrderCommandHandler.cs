@@ -1,11 +1,12 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
+using CarrierAPI.Application.Features.Commands.Order.CreateOrder;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
 
 namespace CarrierAPI.Application.Features.Commands.Order.RemoveOrder
 {
-    public class RemoveOrderCommandHandler : IRequestHandler<RemoveOrderCommandRequest, RemoveOrderCommandResponse>
+    public class RemoveOrderCommandHandler : IRequestHandler<RemoveOrderCommandRequest, DataResult<RemoveOrderCommandResponse>>
     {
         readonly IOrderService _orderService;
         readonly ILogger<RemoveOrderCommandHandler> _logger;
@@ -15,18 +16,12 @@ namespace CarrierAPI.Application.Features.Commands.Order.RemoveOrder
             _logger = logger;
         }
 
-        public async Task<RemoveOrderCommandResponse> Handle(RemoveOrderCommandRequest request, CancellationToken cancellationToken)
+        public async Task<DataResult<RemoveOrderCommandResponse>> Handle(RemoveOrderCommandRequest request, CancellationToken cancellationToken)
         {
             _logger.LogInformation("Sipariş silme");
             if (await _orderService.RemoveOrder(request.Id))
-                return new()
-                {
-                    Message = "Silme işlemi başarılı"
-                };
-            return new()
-            {
-                Message = "Silme işlemi başarısız"
-            };
+                return new SuccessDataResult<RemoveOrderCommandResponse>(null, "Sipariş başarıyla silindi");
+            return new ErrorDataResult<RemoveOrderCommandResponse>();
         }
     }
 }

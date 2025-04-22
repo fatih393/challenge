@@ -1,11 +1,12 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
+using CarrierAPI.Application.Features.Commands.Carrier.RemoveCarrier;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
 
 namespace CarrierAPI.Application.Features.Commands.Carrier.UpdateCarrier
 {
-    public class UpdateCarrierCommandHandler : IRequestHandler<UpdateCarrierCommandRequest, UpdateCarrierCommandResponse>
+    public class UpdateCarrierCommandHandler : IRequestHandler<UpdateCarrierCommandRequest, DataResult<UpdateCarrierCommandResponse>>
     {
         readonly ICarrierService _carrierService;
         readonly ILogger<UpdateCarrierCommandHandler> _logger;
@@ -15,7 +16,7 @@ namespace CarrierAPI.Application.Features.Commands.Carrier.UpdateCarrier
             _logger = logger;
         }
 
-        public async Task<UpdateCarrierCommandResponse> Handle(UpdateCarrierCommandRequest request, CancellationToken cancellationToken)
+        public async Task<DataResult<UpdateCarrierCommandResponse>> Handle(UpdateCarrierCommandRequest request, CancellationToken cancellationToken)
         {
             _logger.LogInformation("Kargo şirketi güncelleme");
             bool control = await _carrierService.UpdateCarrierAsync(
@@ -24,14 +25,8 @@ namespace CarrierAPI.Application.Features.Commands.Carrier.UpdateCarrier
                 request.Active,
                 request.PlusDesiCost);
             if (control)
-                return new()
-                {
-                    Message = "Güncelleme işlemi başarılı"
-                };
-            return new()
-            {
-                Message = "Güncelleme işlemi başarısız"
-            };
+                return new SuccessDataResult<UpdateCarrierCommandResponse>(null, "Kayıt başarıyla güncellendi");
+            return new ErrorDataResult<UpdateCarrierCommandResponse>();
         }
     }
 }

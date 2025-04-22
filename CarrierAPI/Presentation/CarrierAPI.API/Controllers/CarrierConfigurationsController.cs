@@ -23,26 +23,38 @@ namespace CarrierAPI.API.Controllers
         [HttpPost]
         public async Task<IActionResult> AddCarrierConfiguration(CreateCarrierConfigurationCommandRequest createCarrierConfigurationCommandRequest)
         {
-            CreateCarrierConfigurationCommandResponse response = await _mediator.Send(createCarrierConfigurationCommandRequest);
-            return Ok(response);
+            var response = await _mediator.Send(createCarrierConfigurationCommandRequest);
+            if (response.Success)
+                return Ok(response);
+            else
+                return BadRequest(response);
         }
         [HttpGet]
         public async Task<IActionResult> GetCarrierConfiguration([FromQuery] GetCarrierConfigurationQueryRequest getCarrierConfigurationQueryRequest)
         {
-            GetCarrierConfigurationQueryResponse response = await _mediator.Send(getCarrierConfigurationQueryRequest);
-            return Ok(response);
+            var response = await _mediator.Send(getCarrierConfigurationQueryRequest);
+            if (response.Success)
+                return Ok(response);
+            else
+                return BadRequest(response);
         }
         [HttpDelete("{Id}")]
         public async Task<IActionResult> RemoveCarrierConfiguration([FromRoute] RemoveCarrierConfigurationCommandRequest removeCarrierConfigurationCommandRequest)
         {
-            RemoveCarrierConfigurationCommandResponse response = await _mediator.Send(removeCarrierConfigurationCommandRequest);
-            return Ok(response);
+            var response = await _mediator.Send(removeCarrierConfigurationCommandRequest);
+            if (response.Success)
+                return Ok(response);
+            else
+                return BadRequest(response);
         }
         [HttpPut]
         public async Task<IActionResult> UpdateCarrierConfiguration( UpdateCarrierConfigurationCommandRequest updateCarrierConfigurationCommandRequest)
         {
-            UpdateCarrierConfigurationCommandResponse response = await _mediator.Send(updateCarrierConfigurationCommandRequest);
-            return Ok(response);
+            var response = await _mediator.Send(updateCarrierConfigurationCommandRequest);
+            if (response.Success)
+                return Ok(response);
+            else
+                return BadRequest(response);
         }
 
 

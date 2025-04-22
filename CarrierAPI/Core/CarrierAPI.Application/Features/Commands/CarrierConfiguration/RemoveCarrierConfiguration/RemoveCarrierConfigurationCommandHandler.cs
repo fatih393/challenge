@@ -1,11 +1,12 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
+using CarrierAPI.Application.Features.Commands.CarrierConfiguration.CreateCarrierConfiguration;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
 
 namespace CarrierAPI.Application.Features.Commands.CarrierConfiguration.RemoveCarrierConfiguration
 {
-    public class RemoveCarrierConfigurationCommandHandler : IRequestHandler<RemoveCarrierConfigurationCommandRequest, RemoveCarrierConfigurationCommandResponse>
+    public class RemoveCarrierConfigurationCommandHandler : IRequestHandler<RemoveCarrierConfigurationCommandRequest, DataResult<RemoveCarrierConfigurationCommandResponse>>
     {
         readonly ICarrierConfigurationService _carrierConfigurationService;
         readonly ILogger<RemoveCarrierConfigurationCommandHandler> _logger;
@@ -15,18 +16,12 @@ namespace CarrierAPI.Application.Features.Commands.CarrierConfiguration.RemoveCa
             _logger = logger;
         }
 
-        public async Task<RemoveCarrierConfigurationCommandResponse> Handle(RemoveCarrierConfigurationCommandRequest request, CancellationToken cancellationToken)
+        public async Task<DataResult<RemoveCarrierConfigurationCommandResponse>> Handle(RemoveCarrierConfigurationCommandRequest request, CancellationToken cancellationToken)
         {
             _logger.LogInformation("Konfigürasyon silme");
             if (await _carrierConfigurationService.RemoveCarrierConfigurationAsync(request.Id))
-                return new()
-                {
-                    Message= "Silme işlemi başarılı"
-                };
-            return new()
-            {
-                Message = "Silme işleminde bir hata oluştu"
-            };
+                return new SuccessDataResult<RemoveCarrierConfigurationCommandResponse>(null, "Kayıt başarıyla silindi");
+            return new ErrorDataResult<RemoveCarrierConfigurationCommandResponse>();
         }
     }
 }

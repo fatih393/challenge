@@ -47,6 +47,8 @@ namespace CarrierAPI.Infrastructure
             services.AddScoped<IEventPublisher, RabbitMqPublisher>();
             services.AddScoped<IExampleJobService, ExampleJobService>();
             services.AddScoped<IMailService, MailService>();
+            services.AddScoped<IWebScrapingService, WebScrapingService>();
+            services.AddScoped<IRedisCacheServices, RedisCacheServices>();
 
         }
     }
