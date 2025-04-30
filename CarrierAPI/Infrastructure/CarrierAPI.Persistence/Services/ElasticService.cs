@@ -37,25 +37,23 @@ namespace CarrierAPI.Persistence.Services
             return response.IsValidResponse;
         }
 
-        public async Task<IEnumerable<T>> SearchAsync(string query)
-        {
-            if (_client == null)
-            {
-                throw new InvalidOperationException("ElasticsearchClient düzgün bir şekilde başlatılmadı.");
-            }
+       public async Task<List<T>> SearchByNameAsync(string name)
+{
+    var response = await _client.SearchAsync<T>(s => s
+        .Index(_indexName)
+        .Query(q => q
+            .Wildcard(w => w
+                .Field("name.keyword")  
+                .Value($"{name.ToLower()}*")
+            )
+        )
+    );
 
-            var response = await _client.SearchAsync<T>(s => s
-                .Index(_indexName)
-                .Query(q => q.QueryString(qs => qs.Query(query)))
-            );
+    if (!response.IsValidResponse)
+        throw new Exception("Search failed: " + response.ElasticsearchServerError?.ToString());
 
-            if (response == null || !response.IsValidResponse)
-            {
-                throw new InvalidOperationException("Elasticsearch sorgusu başarısız oldu veya geçersiz yanıt döndürdü.");
-            }
-
-            return response.Documents ?? Enumerable.Empty<T>(); 
-        }
+    return response.Documents.ToList();
+}
 
         public async Task<bool> UpdateAsync(int id, T entity)
         {

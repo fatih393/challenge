@@ -50,13 +50,13 @@ namespace CarrierAPI.API.Controllers
         }
 
         [HttpGet("elastic")]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> SearchByName(string name)
         {
-            var products = await _elasticService.SearchAsync("*"); 
+            var products = await _elasticService.SearchByNameAsync(name);
             return Ok(products);
         }
 
-       
+
         [HttpGet("elastic/{id}")]
         public async Task<IActionResult> GetById(int id)
         {

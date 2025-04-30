@@ -241,12 +241,18 @@
   },
   {
     "ContainingType": "CarrierAPI.API.Controllers.ProductsController",
-    "Method": "GetAll",
+    "Method": "SearchByName",
     "RelativePath": "api/Products/elastic",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

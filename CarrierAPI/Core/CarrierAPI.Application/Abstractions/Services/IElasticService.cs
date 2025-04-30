@@ -11,7 +11,7 @@ namespace CarrierAPI.Application.Abstractions.Services
     {
         Task IndexAsync(T document, int id);
         Task<T?> GetByIdAsync(int id);
-        Task<IEnumerable<T>> SearchAsync(string query);
+        Task<List<T>> SearchByNameAsync(string name);
         Task<bool> DeleteAsync(int id);
         Task<bool> UpdateAsync(int id, T document);
     }
