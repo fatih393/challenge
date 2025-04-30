@@ -19,16 +19,20 @@ namespace CarrierAPI.Persistence.Services
         readonly ICarrierConfigurationReadRepository _carrierConfigurationReadRepository;
         readonly IEventPublisher _eventPublisher;
         private readonly IRedisCacheServices _redisCacheService;
-        public OrderService(IOrderReadRepository orderReadRepository, IOrderWriteRepository orderWriteRepository, ICarrierConfigurationReadRepository carrierConfigurationReadRepository, IEventPublisher eventPublisher, IRedisCacheServices redisCacheService)
+        readonly IProductReadRepository _productReadRepository;
+        readonly IProductWriteRepository _productWriteRepository;
+        public OrderService(IOrderReadRepository orderReadRepository, IOrderWriteRepository orderWriteRepository, ICarrierConfigurationReadRepository carrierConfigurationReadRepository, IEventPublisher eventPublisher, IRedisCacheServices redisCacheService, IProductReadRepository productReadRepository, IProductWriteRepository productWriteRepository)
         {
             _orderReadRepository = orderReadRepository;
             _orderWriteRepository = orderWriteRepository;
             _carrierConfigurationReadRepository = carrierConfigurationReadRepository;
             _eventPublisher = eventPublisher;
             _redisCacheService = redisCacheService;
+            _productReadRepository = productReadRepository;
+            _productWriteRepository = productWriteRepository;
         }
 
-        public async Task<bool> AddOrder(int orderDesi)
+        public async Task<bool> AddOrder(int orderDesi, int productId)
         {
          var carrier =  await _carrierConfigurationReadRepository.Table
     .Include(x => x.Carrier)
@@ -51,14 +55,21 @@ namespace CarrierAPI.Persistence.Services
             }
             Order order = new()
             {
+               
                 OrderDesi = orderDesi,
                 CarrierId = carrier.Carrier.Id,
                 OrderDate = DateTime.UtcNow,
                 OrderCarrierCost = carrier.CarrierCost,
+                ProductId = productId
             };
             await _orderWriteRepository.AddAsync(order);
             await _orderWriteRepository.Saveasync();
-            await _eventPublisher.PublishAsync(new PostOrdersEvent(order.Id, order.OrderDesi));
+            var product = await _productReadRepository.GetByIdAsync(productId);
+            product.OrderId = order.Id;
+          
+           
+            await _productWriteRepository.Saveasync();
+           // await _eventPublisher.PublishAsync(new PostOrdersEvent(order.Id, order.OrderDesi));
             return true;
         }
 
@@ -74,11 +85,11 @@ namespace CarrierAPI.Persistence.Services
                     Console.WriteLine(cacheKey + "Cache'ten geldi.");
                     return cachedData;
                 }
-                List<Order> orders =  await _orderReadRepository.GetAll(false).ToListAsync();
+                List<Order> orders =  await _orderReadRepository.GetAll(false).Where(order => order.Visibility == true).ToListAsync();
                 await _redisCacheService.SetCacheAsync(cacheKey, orders, TimeSpan.FromMinutes(10), TimeSpan.FromMinutes(5));
 
                 Console.WriteLine(cacheKey + " Cache'e eklendi.");
-                await _eventPublisher.PublishAsync(new GetOrdersEvent());
+             //   await _eventPublisher.PublishAsync(new GetOrdersEvent());
                 return orders;
             }
             catch
@@ -91,15 +102,35 @@ namespace CarrierAPI.Persistence.Services
         {
             try
             {
+                Order order = await _orderReadRepository.GetByIdAsync(id);
+                Product product = await _productReadRepository.GetByIdAsync(order.ProductId.Value);
+                product.OrderId = null;
+                await _productWriteRepository.Saveasync();
                 await _orderWriteRepository.RemoveAsync(id);
                 await _orderWriteRepository.Saveasync();
-                await _eventPublisher.PublishAsync(new RemoveOrdersEvent(id));
+           //     await _eventPublisher.PublishAsync(new RemoveOrdersEvent(id));
                 return true;    
             }
             catch
             {
                 return false;
             }
+        }
+
+        public async Task<bool> SoftRemoveOrder(int id)
+        {
+            try
+            {
+                Order order = await _orderReadRepository.GetByIdAsync(id);
+                order.Visibility = false;
+                await _orderWriteRepository.Saveasync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+         
         }
     }
 }

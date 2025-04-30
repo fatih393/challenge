@@ -163,11 +163,37 @@ namespace CarrierAPI.Persistence.Migrations
                     b.Property<int>("OrderDesi")
                         .HasColumnType("integer");
 
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("Visibility")
+                        .HasColumnType("boolean");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CarrierId");
 
                     b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("CarrierAPI.Domain.Entities.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int?>("OrderId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<int>", b =>
@@ -302,6 +328,21 @@ namespace CarrierAPI.Persistence.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("OrderProduct", b =>
+                {
+                    b.Property<int>("OrdersId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("ProductsId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("OrdersId", "ProductsId");
+
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("OrderProduct");
+                });
+
             modelBuilder.Entity("CarrierAPI.Domain.Entities.CarrierConfiguration", b =>
                 {
                     b.HasOne("CarrierAPI.Domain.Entities.Carrier", "Carrier")
@@ -371,6 +412,21 @@ namespace CarrierAPI.Persistence.Migrations
                     b.HasOne("CarrierAPI.Domain.Entities.Identity.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("OrderProduct", b =>
+                {
+                    b.HasOne("CarrierAPI.Domain.Entities.Order", null)
+                        .WithMany()
+                        .HasForeignKey("OrdersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CarrierAPI.Domain.Entities.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

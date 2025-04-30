@@ -13,6 +13,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using Elastic.Clients.Elasticsearch;
+using CarrierAPI.Domain.Entities;
 
 namespace CarrierAPI.Persistence
 {
@@ -33,6 +35,14 @@ namespace CarrierAPI.Persistence
             services.AddScoped<ICarrierConfigurationReadRepository, CarrierConfigurationReadRepository>();
             services.AddScoped<IOrderReadRepository, OrderReadRepository>();
             services.AddScoped<IOrderWriteRepository, OrderWriteRepository>();
+            services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
+            services.AddScoped<IProductReadRepository, ProductReadRepository>();
+            services.AddScoped<IProductService, ProductService>();
+           /* services.AddScoped<IElasticService<Product>, ElasticService<Product>>();
+            ElasticsearchClientSettings settings = new(new Uri("http://localhost:9200"));
+            settings.DefaultIndex("products");
+            ElasticsearchClient client = new ElasticsearchClient(settings);
+            client.IndexAsync("products").GetAwaiter().GetResult();*/
             services.AddStackExchangeRedisCache(options =>
             {
                 options.Configuration = configuration.GetConnectionString("Redis");

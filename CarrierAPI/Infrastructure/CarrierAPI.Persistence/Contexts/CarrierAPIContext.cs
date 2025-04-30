@@ -17,5 +17,6 @@ namespace CarrierAPI.Persistence.Contexts
         public DbSet<Carrier> Carriers { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<CarrierConfiguration> CarrierConfigurations { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

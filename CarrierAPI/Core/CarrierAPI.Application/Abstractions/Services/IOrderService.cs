@@ -8,8 +8,9 @@ namespace CarrierAPI.Application.Abstractions.Services
 {
     public interface IOrderService
     {
-        Task<bool> AddOrder(int orderDesi);
+        Task<bool> AddOrder(int orderDesi, int productId);
         Task<List<Domain.Entities.Order>> GetOrders();
         Task<bool> RemoveOrder(int id);
+        Task<bool> SoftRemoveOrder(int id);
     }
 }

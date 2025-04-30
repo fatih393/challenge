@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "t/tW5+bj/d4=",
+  "dgSpecHash": "SZyE/qDxfg4=",
   "success": true,
   "projectFilePath": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Presentation\\CarrierAPI.API\\CarrierAPI.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fatih\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\Fatih\\.nuget\\packages\\elastic.clients.elasticsearch\\8.10.0\\elastic.clients.elasticsearch.8.10.0.nupkg.sha512",
+    "C:\\Users\\Fatih\\.nuget\\packages\\elastic.transport\\0.4.16\\elastic.transport.0.4.16.nupkg.sha512",
     "C:\\Users\\Fatih\\.nuget\\packages\\hangfire\\1.8.18\\hangfire.1.8.18.nupkg.sha512",
     "C:\\Users\\Fatih\\.nuget\\packages\\hangfire.aspnetcore\\1.8.18\\hangfire.aspnetcore.1.8.18.nupkg.sha512",
     "C:\\Users\\Fatih\\.nuget\\packages\\hangfire.core\\1.8.18\\hangfire.core.1.8.18.nupkg.sha512",

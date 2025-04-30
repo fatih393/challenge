@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SGrK/SnxG70=",
+  "dgSpecHash": "5OCSchmLY4c=",
   "success": true,
   "projectFilePath": "C:\\Users\\Fatih\\Desktop\\Challenge-2\\CarrierAPI\\Infrastructure\\CarrierAPI.Persistence\\CarrierAPI.Persistence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Fatih\\.nuget\\packages\\elastic.clients.elasticsearch\\8.10.0\\elastic.clients.elasticsearch.8.10.0.nupkg.sha512",
+    "C:\\Users\\Fatih\\.nuget\\packages\\elastic.transport\\0.4.16\\elastic.transport.0.4.16.nupkg.sha512",
     "C:\\Users\\Fatih\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Fatih\\.nuget\\packages\\masstransit\\8.4.0\\masstransit.8.4.0.nupkg.sha512",
     "C:\\Users\\Fatih\\.nuget\\packages\\masstransit.abstractions\\8.4.0\\masstransit.abstractions.8.4.0.nupkg.sha512",

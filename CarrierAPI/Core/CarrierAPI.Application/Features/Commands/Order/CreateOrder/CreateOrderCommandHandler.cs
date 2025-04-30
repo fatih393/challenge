@@ -19,7 +19,7 @@ namespace CarrierAPI.Application.Features.Commands.Order.CreateOrder
         public async Task<DataResult<CreateOrderCommandResponse>> Handle(CreateOrderCommandRequest request, CancellationToken cancellationToken)
         {
             _logger.LogInformation("Sipariş ekleme");
-            bool control = await _orderService.AddOrder(request.OrderDesi);
+            bool control = await _orderService.AddOrder(request.OrderDesi, request.ProductId);
             if (control)
                 return new SuccessDataResult<CreateOrderCommandResponse>(null, "Sipariş başarıyla oluşturuldu");
             return new ErrorDataResult<CreateOrderCommandResponse>();

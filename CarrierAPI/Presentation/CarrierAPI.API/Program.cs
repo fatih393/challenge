@@ -15,6 +15,10 @@ using Hangfire;
 using CarrierAPI.Infrastructure.Service;
 using CarrierAPI.Application.Abstractions.Services;
 using StackExchange.Redis;
+using Elastic.Clients.Elasticsearch;
+using CarrierAPI.Domain.Entities;
+using CarrierAPI.Persistence.Services;
+using CarrierAPI.Application.DTOs;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -29,6 +33,26 @@ builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddInfrastructureService(builder.Configuration);
 
 builder.Services.AddApplicationServices();
+
+builder.Services.AddSingleton(provider =>
+{
+    
+    var settings = new ElasticsearchClientSettings(new Uri("http://localhost:9200"));
+    settings.DefaultIndex("products");
+
+    
+    return new ElasticsearchClient(settings);
+});
+
+builder.Services.AddScoped<IElasticService<ProductDto>>(provider =>
+{
+   
+    var client = provider.GetRequiredService<ElasticsearchClient>();
+
+    
+    return new ElasticService<ProductDto>(client, "products");  // "products" index adý
+});
+
 
 builder.Services.AddSwaggerGen();
 

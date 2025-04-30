@@ -12,12 +12,14 @@ namespace CarrierAPI.Domain.Entities.Events.Order
         public DateTime OrderDate { get; set; }
         public int OrderDesi { get; set; }
         public string Message { get; set; }
+     
         public PostOrdersEvent(int id, int orderDesi)
         {
             Id = id;
             OrderDate = DateTime.UtcNow;
             Message = id + " numaralı " + orderDesi + " desili sipariş alındı";
             OrderDesi = orderDesi;
+           
         }
 
     }

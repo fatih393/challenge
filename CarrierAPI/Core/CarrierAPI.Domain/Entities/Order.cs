@@ -14,5 +14,8 @@ namespace CarrierAPI.Domain.Entities
         public decimal OrderCarrierCost { get; set; }
         public int CarrierId { get; set; }
         public Carrier Carrier { get; set; }
+        public ICollection<Product> Products { get; set; }
+        public int? ProductId { get; set; }
+        public bool Visibility { get; set; } = true;
     }
 }
