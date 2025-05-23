@@ -326,6 +326,22 @@
   },
   {
     "ContainingType": "CarrierAPI.API.Controllers.UsersController",
+    "Method": "GoogleLogin",
+    "RelativePath": "api/Users/google-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "googleLoginCommandRequest",
+        "Type": "CarrierAPI.Application.Features.Commands.AppUser.GoogleLogin.GoogleLoginCommandRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarrierAPI.API.Controllers.UsersController",
     "Method": "LoginUser",
     "RelativePath": "api/Users/LoginUser",
     "HttpMethod": "POST",
@@ -336,6 +352,22 @@
         "Name": "loginUserCommandRequest",
         "Type": "CarrierAPI.Application.Features.Commands.AppUser.LoginUser.LoginUserCommandRequest",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarrierAPI.API.Controllers.UsersController",
+    "Method": "RefreshTokenLogin",
+    "RelativePath": "api/Users/RefreshTokenLogin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RefreshToken",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

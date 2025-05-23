@@ -19,6 +19,10 @@ using Elastic.Clients.Elasticsearch;
 using CarrierAPI.Domain.Entities;
 using CarrierAPI.Persistence.Services;
 using CarrierAPI.Application.DTOs;
+using System.Security.Cryptography;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -55,6 +59,26 @@ builder.Services.AddScoped<IElasticService<ProductDto>>(provider =>
 
 
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer("Admin", options =>
+{
+    options.TokenValidationParameters = new()
+    {
+        ValidateAudience = true,
+        ValidateIssuer = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ClockSkew = TimeSpan.Zero,
+        ValidAudience = builder.Configuration["Token:Audience"],
+        ValidIssuer = builder.Configuration["Token:Issuer"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Token:SecurityKey"]))
+    };
+});
+
+
+
+
+
 
 var redisConnection = ConnectionMultiplexer.Connect(builder.Configuration.GetConnectionString("Redis"));
 builder.Services.AddSingleton<IConnectionMultiplexer>(redisConnection);
@@ -111,6 +135,8 @@ app.UseHangfireDashboard();
     job => job.RunExampleJob(),            
     Cron.Minutely                          
 );*/ //Her dakika jobun çalýþmasý
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 

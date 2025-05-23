@@ -38,6 +38,8 @@ namespace CarrierAPI.Persistence
             services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
             services.AddScoped<IProductReadRepository, ProductReadRepository>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAuthService, AuthService>();
            /* services.AddScoped<IElasticService<Product>, ElasticService<Product>>();
             ElasticsearchClientSettings settings = new(new Uri("http://localhost:9200"));
             settings.DefaultIndex("products");

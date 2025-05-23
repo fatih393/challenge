@@ -4,12 +4,14 @@ using CarrierAPI.Application.Features.Commands.Order.SoftRemoveOrder;
 using CarrierAPI.Application.Features.Queries.Order.GetOrder;
 using CarrierAPI.Persistence.Services;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarrierAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes ="Admin")]
     public class OrdersController : ControllerBase
     {
         readonly IMediator _mediator;

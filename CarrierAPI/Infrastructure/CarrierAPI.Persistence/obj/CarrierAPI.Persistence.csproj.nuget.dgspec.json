@@ -207,6 +207,10 @@
               "target": "Package",
               "version": "[8.10.0, )"
             },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.69.0, )"
+            },
             "MassTransit": {
               "target": "Package",
               "version": "[8.4.0, )"

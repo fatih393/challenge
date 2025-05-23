@@ -1,9 +1,11 @@
 ﻿using CarrierAPI.Application.Abstractions.Services;
+using CarrierAPI.Application.Abstractions.Token;
 using CarrierAPI.Infrastructure.Consumer.Gets;
 using CarrierAPI.Infrastructure.Consumer.Posts;
 using CarrierAPI.Infrastructure.Consumer.Remove;
 using CarrierAPI.Infrastructure.Consumer.Updates;
 using CarrierAPI.Infrastructure.Service;
+using CarrierAPI.Infrastructure.Token;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -49,6 +51,7 @@ namespace CarrierAPI.Infrastructure
             services.AddScoped<IMailService, MailService>();
             services.AddScoped<IWebScrapingService, WebScrapingService>();
             services.AddScoped<IRedisCacheServices, RedisCacheServices>();
+            services.AddScoped<ITokenHandler, TokenHandler>();
 
         }
     }
